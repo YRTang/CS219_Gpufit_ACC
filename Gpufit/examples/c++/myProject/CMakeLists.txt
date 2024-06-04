@@ -1,0 +1,30 @@
+
+function( add_example module name )
+	# set(HEADER_FILES mp_solver.h csv_reader.h) # added
+	# target_include_directories(${name} PRIVATE ) #added
+	include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+	file(GLOB SOURCES "*.cpp" "*.h") #added
+	add_executable( ${name} ${SOURCES}) # add_executable( ${name} ${name}.cpp) #original
+	target_link_libraries( ${name} ${module} )
+	set_property( TARGET ${name}
+		PROPERTY RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}" )
+	set_property( TARGET ${name} PROPERTY FOLDER GpufitExamples )
+endfunction()
+
+function( add_cuda_example module name )
+	cuda_add_executable( ${name} ${name}.cu )
+	target_link_libraries( ${name} ${module} )
+	set_property( TARGET ${name}
+		PROPERTY RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}" )
+	set_property( TARGET ${name} PROPERTY FOLDER GpufitExamples )
+endfunction()
+
+# Examples
+
+# add_example( Gpufit Simple_Example )
+# add_example( Gpufit Linear_Regression_Example )
+# add_example( Gpufit Gauss_Fit_2D_Example )
+# add_cuda_example( Gpufit CUDA_Interface_Example )
+# add_example( Gpufit hello_world )
+add_example( Gpufit mp_solver)
+
