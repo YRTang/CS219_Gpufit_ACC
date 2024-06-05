@@ -332,7 +332,6 @@ Gpufit/examples/CMakeFiles/mp_solver.dir/mp_solver.cpp.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/test/sarahTang/Gpufit/examples/c++/myProject/../../../Gpufit/gpufit.h \
- /usr/include/c++/13/cstddef \
- /home/test/sarahTang/Gpufit/examples/c++/myProject/../../../Gpufit/constants.h \
- /home/test/sarahTang/Gpufit/examples/c++/myProject/../../../Gpufit/definitions.h
+ /home/test/sarahTang/Gpufit/Gpufit/gpufit.h /usr/include/c++/13/cstddef \
+ /home/test/sarahTang/Gpufit/Gpufit/constants.h \
+ /home/test/sarahTang/Gpufit/Gpufit/definitions.h

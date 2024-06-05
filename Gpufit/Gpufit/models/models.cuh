@@ -96,7 +96,7 @@ void configure_model(ModelID const model_id, int & n_parameters, int & n_dimensi
     case SPLINE_3D:             n_parameters = 5; n_dimensions = 3; break;
     case SPLINE_3D_MULTICHANNEL:         n_parameters = 5; n_dimensions = 4; break;
     case SPLINE_3D_PHASE_MULTICHANNEL:   n_parameters = 6; n_dimensions = 4; break;
-    case CHANNEL_EQ:            n_parameters = 4; n_dimensions = 4; break;
+    case CHANNEL_EQ:            n_parameters = 12; n_dimensions = 4; break;
     default: throw std::runtime_error("unknown model ID");
     }
 }

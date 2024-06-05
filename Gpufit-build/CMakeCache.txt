@@ -412,9 +412,6 @@ DVIPDF_CONVERTER:FILEPATH=/usr/bin/dvipdfm
 //Path to a program.
 DVIPS_CONVERTER:FILEPATH=/usr/bin/dvips
 
-//Path to a program.
-GITCOMMAND:FILEPATH=/usr/bin/git
-
 //Value Computed by CMake
 Gpufit_BINARY_DIR:STATIC=/home/test/sarahTang/Gpufit-build
 
@@ -483,12 +480,6 @@ Matlab_INCLUDE_DIRS:PATH=Matlab_INCLUDE_DIRS-NOTFOUND
 
 //Extensions for the mex targets (automatically given by Matlab)
 Matlab_MEX_EXTENSION:STRING=
-
-//Path to a library.
-Matlab_MEX_LIBRARY:FILEPATH=Matlab_MEX_LIBRARY-NOTFOUND
-
-//Path to a library.
-Matlab_MX_LIBRARY:FILEPATH=Matlab_MX_LIBRARY-NOTFOUND
 
 //Matlab installation root path
 Matlab_ROOT_DIR:PATH=/usr
@@ -807,8 +798,6 @@ FIND_PACKAGE_MESSAGE_DETAILS_LATEX:INTERNAL=[/usr/bin/latex][cfound components: 
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.12.3()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
-//ADVANCED property for variable: GITCOMMAND
-GITCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: HTLATEX_COMPILER
 HTLATEX_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Java_IDLJ_EXECUTABLE
@@ -839,12 +828,8 @@ MAKEINDEX_COMPILER-ADVANCED:INTERNAL=1
 MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
-//internal matlab location for the discovered version
-Matlab_PROG_VERSION_STRING_AUTO_DETECT:INTERNAL=
 //last Matlab root dir location
 Matlab_ROOT_DIR_LAST_CACHED:INTERNAL=/usr
-//internal matlab location for the discovered version
-Matlab_VERSION_STRING_INTERNAL:INTERNAL=
 //ADVANCED property for variable: PDFLATEX_COMPILER
 PDFLATEX_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PDFTOPS_CONVERTER

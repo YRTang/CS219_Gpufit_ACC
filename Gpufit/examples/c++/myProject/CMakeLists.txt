@@ -1,11 +1,11 @@
 
 function( add_example module name )
-	# set(HEADER_FILES mp_solver.h csv_reader.h) # added
-	# target_include_directories(${name} PRIVATE ) #added
-	include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-	file(GLOB SOURCES "*.cpp" "*.h") #added
-	add_executable( ${name} ${SOURCES}) # add_executable( ${name} ${name}.cpp) #original
+	# include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+	# file(GLOB SOURCES "*.cpp" "*.h") #added
+	# add_executable( ${name} ${SOURCES}) # add_executable( ${name} ${name}.cpp) #original
+	add_executable( ${name} ${name}.cpp )
 	target_link_libraries( ${name} ${module} )
+	
 	set_property( TARGET ${name}
 		PROPERTY RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}" )
 	set_property( TARGET ${name} PROPERTY FOLDER GpufitExamples )

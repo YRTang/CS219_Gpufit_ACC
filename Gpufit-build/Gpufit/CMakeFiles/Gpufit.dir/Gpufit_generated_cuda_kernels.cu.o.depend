@@ -9,6 +9,7 @@ SET(CUDA_NVCC_DEPEND
  "/home/test/sarahTang/Gpufit/Gpufit/estimators/mle.cuh"
  "/home/test/sarahTang/Gpufit/Gpufit/models/brown_dennis.cuh"
  "/home/test/sarahTang/Gpufit/Gpufit/models/cauchy_2d_elliptic.cuh"
+ "/home/test/sarahTang/Gpufit/Gpufit/models/channel_eq.cuh"
  "/home/test/sarahTang/Gpufit/Gpufit/models/fletcher_powell_helix.cuh"
  "/home/test/sarahTang/Gpufit/Gpufit/models/gauss_1d.cuh"
  "/home/test/sarahTang/Gpufit/Gpufit/models/gauss_2d.cuh"

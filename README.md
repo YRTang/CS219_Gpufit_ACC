@@ -16,6 +16,8 @@ Implement two acceleration approaches for the given real-time module of channel 
 - Evaluation Metrics: processing time under a given estimator setting.
 
 ## Installation
+We are testing on Linux machine, ubuntu 24.04.
+
 ### [Documents](https://gpufit.readthedocs.io/en/latest/installation.html#compiling-gpufit-on-linux)
 ```
 git clone https://github.com/gpufit/Gpufit.git Gpufit
@@ -45,3 +47,8 @@ make
 * Edit CMakeLists.txt
     - At the bottom of the file, add “add_example(Gpufit hello_world) “
 * Cmake and make like above procedure
+
+## Instructions
+```
+
+```

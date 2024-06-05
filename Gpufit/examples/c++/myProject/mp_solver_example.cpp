@@ -1,5 +1,6 @@
-#include "../../Gpufit/gpufit.h"
-
+#include "/home/test/sarahTang/Gpufit/Gpufit/gpufit.h"
+#include "mp_solver.h"
+#include "csv_reader.h"
 #include <vector>
 #include <random>
 #include <iostream>
@@ -7,70 +8,46 @@
 
 #define CSV_PATH "/home/test/sarahTang/Gpufit/examples/c++/myProject/sample_input.csv"
 
-void mp_solver_example()
+void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 {
-    /*
-    This example generates test data in form of 10000 one dimensional linear
-    curves with the size of 20 data points per curve. It is noised by normal
-    distributed noise. The initial guesses were randomized, within a specified
-    range of the true value. The LINEAR_1D model is fitted to the test data sets
-    using the LSE estimator. The optional parameter user_info is used to pass 
-    custom x positions of the data sets. The same x position values are used for
-    every fit.
-
-    The console output shows
-    - the ratio of converged fits including ratios of not converged fits for
-      different reasons,
-    - the values of the true parameters and the mean values of the fitted
-      parameters including their standard deviation,
-    - the mean chi square value
-    - and the mean number of iterations needed.
-    */
-
 	// number of fits, fit points and parameters
 	std::size_t const n_fits = 1000;
-	std::size_t const n_points_per_fit = 32;
-	std::size_t const n_model_parameters = 9;
+	std::size_t const n_points_per_fit = mp_config->nof_pilots; //=32
+	std::size_t const n_model_parameters = 12;
 
 	// custom x positions for the data points of every fit, stored in user info
-	std::vector< REAL > user_info(n_points_per_fit);
+	std::vector< REAL > user_info(n_points_per_fit*2);
+	
 	for (std::size_t i = 0; i < n_points_per_fit; i++)
 	{
-		user_info[i] = static_cast<REAL>(pow(2, i));
+		user_info[i*2] = mp_config->m[i];
+		user_info[i*2+1] = mp_config->n[i];
 	}
 
 	// size of user info in bytes
-	std::size_t const user_info_size = n_points_per_fit * sizeof(REAL); 
-
-	// initialize random number generator
-	std::mt19937 rng;
-	rng.seed(0);
-	std::uniform_real_distribution< REAL > uniform_dist(0, 1);
-	std::normal_distribution< REAL > normal_dist(0, 1);
-
-	// true parameters
-	std::vector< REAL > true_parameters { 5, 2 }; // offset, slope
+	std::size_t const user_info_size = 2 * n_points_per_fit * sizeof(REAL); 
 
 	// initial parameters (randomized)
 	std::vector< REAL > initial_parameters(n_fits * n_model_parameters);
 	for (std::size_t i = 0; i != n_fits; i++)
 	{
-		// random offset
-		initial_parameters[i * n_model_parameters + 0] = true_parameters[0] * (0.8f + 0.4f * uniform_dist(rng));
-		// random slope
-		initial_parameters[i * n_model_parameters + 1] = true_parameters[0] * (0.8f + 0.4f * uniform_dist(rng));
+		for (int p = 0; p < mp_config->nof_paths; ++p)
+		{
+			initial_parameters[i * n_model_parameters + p*4 + 0] =  mp_profile->tau[p]; //4: t, v, h_real, h_imag
+			initial_parameters[i * n_model_parameters + p*4 + 1] =  mp_profile->nu[p];
+			initial_parameters[i * n_model_parameters + p*4 + 2] =  creal(mp_profile->h[p]);
+			initial_parameters[i * n_model_parameters + p*4 + 3] =  cimag(mp_profile->h[p]);
+		}
 	}
 
 	// generate data
-	std::vector< REAL > data(n_points_per_fit * n_fits);
-	for (std::size_t i = 0; i != data.size(); i++)
-	{
-		std::size_t j = i / n_points_per_fit; // the fit
-		std::size_t k = i % n_points_per_fit; // the position within a fit
-
-		REAL x = user_info[k];
-		REAL y = true_parameters[0] + x * true_parameters[1];
-		data[i] = y + normal_dist(rng);
+	std::vector< REAL > data(2 * n_points_per_fit * n_fits);
+	for (std::size_t j = 0; j < n_fits; j++){
+		for (std::size_t i = 0; i < n_points_per_fit; i++)
+		{
+			data[j*n_fits+2*i] = creal(mp_config->y[i]);
+			data[j*n_fits+2*i+1] = cimag(mp_config->y[i]);
+		}
 	}
 
 	// tolerance
@@ -80,10 +57,10 @@ void mp_solver_example()
 	int const max_number_iterations = 20;
 
 	// estimator ID
-	int const estimator_id = LSE;
+	int const estimator_id = LSE_COMPLEX;
 
 	// model ID
-	int const model_id = LINEAR_1D;
+	int const model_id = CHANNEL_EQ;
 
 	// parameters to fit (all of them)
 	std::vector< int > parameters_to_fit(n_model_parameters, 1);
@@ -121,79 +98,9 @@ void mp_solver_example()
 		throw std::runtime_error(gpufit_get_last_error());
 	}
 
-	// get fit states
-	std::vector< int > output_states_histogram(5, 0);
-	for (std::vector< int >::iterator it = output_states.begin(); it != output_states.end(); ++it)
-	{
-		output_states_histogram[*it]++;
-	}
+	//examine output_parameters
+	// Matrix[3x4]
 
-	std::cout << "ratio converged              " << (REAL) output_states_histogram[0] / n_fits << "\n";
-	std::cout << "ratio max iteration exceeded " << (REAL) output_states_histogram[1] / n_fits << "\n";
-	std::cout << "ratio singular hessian       " << (REAL) output_states_histogram[2] / n_fits << "\n";
-	std::cout << "ratio neg curvature MLE      " << (REAL) output_states_histogram[3] / n_fits << "\n";
-	std::cout << "ratio gpu not read           " << (REAL) output_states_histogram[4] / n_fits << "\n";
-
-	// compute mean fitted parameters for converged fits
-	std::vector< REAL > output_parameters_mean(n_model_parameters, 0);
-	for (std::size_t i = 0; i != n_fits; i++)
-	{
-		if (output_states[i] == FitState::CONVERGED)
-		{
-			// add offset
-			output_parameters_mean[0] += output_parameters[i * n_model_parameters + 0];
-			// add slope
-			output_parameters_mean[1] += output_parameters[i * n_model_parameters + 1];
-		}
-	}
-	output_parameters_mean[0] /= output_states_histogram[0];
-	output_parameters_mean[1] /= output_states_histogram[0];
-
-	// compute std of fitted parameters for converged fits
-	std::vector< REAL > output_parameters_std(n_model_parameters, 0);
-	for (std::size_t i = 0; i != n_fits; i++)
-	{
-		if (output_states[i] == FitState::CONVERGED)
-		{
-			// add squared deviation for offset
-			output_parameters_std[0] += (output_parameters[i * n_model_parameters + 0] - output_parameters_mean[0]) * (output_parameters[i * n_model_parameters + 0] - output_parameters_mean[0]);
-			// add squared deviation for slope
-			output_parameters_std[1] += (output_parameters[i * n_model_parameters + 1] - output_parameters_mean[1]) * (output_parameters[i * n_model_parameters + 1] - output_parameters_mean[1]);
-		}
-	}
-	// divide and take square root
-	output_parameters_std[0] = sqrt(output_parameters_std[0] / output_states_histogram[0]);
-	output_parameters_std[1] = sqrt(output_parameters_std[1] / output_states_histogram[0]);
-
-	// print mean and std
-	std::cout << "offset  true " << true_parameters[0] << " mean " << output_parameters_mean[0] << " std " << output_parameters_std[0] << "\n";
-	std::cout << "slope   true " << true_parameters[1] << " mean " << output_parameters_mean[1] << " std " << output_parameters_std[1] << "\n";
-
-	// compute mean chi-square for those converged
-	REAL  output_chi_square_mean = 0;
-	for (std::size_t i = 0; i != n_fits; i++)
-	{
-		if (output_states[i] == FitState::CONVERGED)
-		{
-			output_chi_square_mean += output_chi_square[i];
-		}
-	}
-	output_chi_square_mean /= static_cast<REAL>(output_states_histogram[0]);
-	std::cout << "mean chi square " << output_chi_square_mean << "\n";
-
-	// compute mean number of iterations for those converged
-	REAL  output_number_iterations_mean = 0;
-	for (std::size_t i = 0; i != n_fits; i++)
-	{
-		if (output_states[i] == FitState::CONVERGED)
-		{
-			output_number_iterations_mean += static_cast<REAL>(output_number_iterations[i]);
-		}
-	}
-
-	// normalize
-	output_number_iterations_mean /= static_cast<REAL>(output_states_histogram[0]);
-	std::cout << "mean number of iterations " << output_number_iterations_mean << "\n";
 }
 
 
@@ -204,9 +111,8 @@ int main(int argc, char *argv[])
     csvReader reader(CSV_PATH);
     reader.readData();
     mp_config_t mp_config = reader.getData();
-  
     
-    mp_solver_example();
+    mp_solver_example(&mp_profile, &mp_config);
 
     std::cout << std::endl << "Example completed!" << std::endl;
     std::cout << "Press ENTER to exit" << std::endl;

@@ -11,7 +11,7 @@
 #include <chrono>
 #include "mp_solver.h"
 #include "csv_reader.h"
-#include "../../../Gpufit/gpufit.h"
+#include "/home/test/sarahTang/Gpufit/Gpufit/gpufit.h" // ../../Gpufit/gpufit.h
 
 #define MAX_ITER 20
 #define CSV_PATH "/home/test/sarahTang/Gpufit/examples/c++/myProject/sample_input.csv"
