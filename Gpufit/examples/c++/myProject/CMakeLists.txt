@@ -26,5 +26,5 @@ endfunction()
 # add_example( Gpufit Gauss_Fit_2D_Example )
 # add_cuda_example( Gpufit CUDA_Interface_Example )
 # add_example( Gpufit hello_world )
-add_example( Gpufit mp_solver)
+add_example( Gpufit mp_solver_example)
 
