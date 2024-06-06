@@ -47,9 +47,9 @@ __device__ void calculate_chi_square_lse_complex(
     std::size_t const user_info_size)
 {
     // deviation of real number
-    REAL const real_d = value[point_index] - data[point_index];
+    REAL const real_d = value[2 * point_index] - data[2 * point_index];
     // deviation of imaginary number
-    REAL const image_n_d = value[point_index + 1] - data[point_index + 1];
+    REAL const image_n_d = value[2 * point_index + 1] - data[2 * point_index + 1];
 
     if (weight)
     {
