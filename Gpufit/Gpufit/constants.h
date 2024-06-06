@@ -3,7 +3,8 @@
 
 // fitting model ID
 
-enum ModelID {
+enum ModelID
+{
     GAUSS_1D = 0,
     GAUSS_2D = 1,
     GAUSS_2D_ELLIPTIC = 2,
@@ -21,21 +22,51 @@ enum ModelID {
 };
 
 // estimator ID
-enum EstimatorID { LSE = 0, MLE = 1 };
+enum EstimatorID
+{
+    LSE = 0,
+    MLE = 1,
+    LSE_COMPLEX = 2
+};
 
 // fit state
-enum FitState { CONVERGED = 0, MAX_ITERATION = 1, SINGULAR_HESSIAN = 2, NEG_CURVATURE_MLE = 3, GPU_NOT_READY = 4 };
+enum FitState
+{
+    CONVERGED = 0,
+    MAX_ITERATION = 1,
+    SINGULAR_HESSIAN = 2,
+    NEG_CURVATURE_MLE = 3,
+    GPU_NOT_READY = 4
+};
 
 // return state
-enum ReturnState { OK = 0, ERROR = -1 };
+enum ReturnState
+{
+    OK = 0,
+    ERROR = -1
+};
 
 // input/output data location
-enum DataLocation { HOST = 0, DEVICE = 1 };
+enum DataLocation
+{
+    HOST = 0,
+    DEVICE = 1
+};
 
 // bounds
-enum Bound { LOWER_BOUND = 0, UPPER_BOUND = 1 };
+enum Bound
+{
+    LOWER_BOUND = 0,
+    UPPER_BOUND = 1
+};
 
 // constraint type
-enum ConstraintType { NONE = 0, LOWER = 1, UPPER = 2, LOWER_UPPER = 3 };
+enum ConstraintType
+{
+    NONE = 0,
+    LOWER = 1,
+    UPPER = 2,
+    LOWER_UPPER = 3
+};
 
 #endif
