@@ -23,7 +23,6 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 		user_info[i * 2] = mp_config->m[i];
 		user_info[i * 2 + 1] = mp_config->n[i];
 	}
-
 	// size of user info in bytes
 	std::size_t const user_info_size = 2 * n_points_per_fit * sizeof(REAL);
 
@@ -46,13 +45,15 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	}
 
 	// generate data
-	std::vector<REAL> data(2 * n_points_per_fit * n_fits);
+	std::vector<REAL> data(n_points_per_fit * n_fits);
 	for (std::size_t j = 0; j < n_fits; j++)
 	{
 		for (std::size_t i = 0; i < n_points_per_fit; i++)
 		{
-			data[j * n_fits + 2 * i] = creal(mp_config->y[i]);
-			data[j * n_fits + 2 * i + 1] = cimag(mp_config->y[i]);
+			/* data[j * n_fits + 2 * i] = creal(mp_config->y[i]);
+			data[j * n_fits + 2 * i + 1] = cimag(mp_config->y[i]); */
+
+			data[j * n_fits + i] = creal(mp_config->y[i]) + cimag(mp_config->y[i]);
 		}
 	}
 
@@ -63,7 +64,7 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	int const max_number_iterations = 20;
 
 	// estimator ID
-	int const estimator_id = MLE;
+	int const estimator_id = LSE_COMPLEX;
 
 	// model ID
 	int const model_id = CHANNEL_EQ;
@@ -107,7 +108,33 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	cout << "size=" << output_parameters.size() << endl;
 	for (int i = 0; i < 12; i++)
 	{
-		cout << output_parameters.data()[i] << endl;
+		if (i % 4 == 0)
+			cout << endl;
+		cout << output_parameters.data()[i] << " ";
+	}
+
+	cout << endl
+		 << "iteration number: " << endl;
+
+	for (int i : output_number_iterations)
+	{
+		cout << i << endl;
+	}
+
+	cout << endl
+		 << "chi-square" << endl;
+
+	for (REAL i : output_chi_square)
+	{
+		cout << i << endl;
+	}
+
+	cout << endl
+		 << "state" << endl;
+
+	for (int i : output_states)
+	{
+		cout << i << endl;
 	}
 }
 

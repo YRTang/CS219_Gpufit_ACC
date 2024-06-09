@@ -1,5 +1,5 @@
-#ifndef GPUFIT_LSE_COMPLEX_CUH_INCLUDED
-#define GPUFIT_LSE_COMPLEX_CUH_INCLUDED
+#ifndef GPUFIT_LSE_CUH_INCLUDED
+#define GPUFIT_LSE_CUH_INCLUDED
 
 /* Description of the calculate_chi_square_lse function
  * =====================================================
@@ -36,11 +36,11 @@
  *
  */
 
-__device__ void calculate_chi_square_lse_complex(
+__device__ void calculate_chi_square_modified_lse(
     volatile REAL *chi_square,
     int const point_index,
-    REAL const *data,  // outout: y
-    REAL const *value, // predicted: cal
+    REAL const *data,
+    REAL const *value,
     REAL const *weight,
     int *state,
     char *user_info,
@@ -96,7 +96,7 @@ __device__ void calculate_chi_square_lse_complex(
  *
  */
 
-__device__ void calculate_hessian_lse_complex(
+__device__ void calculate_hessian_modified_lse(
     double *hessian,
     int const point_index,
     int const parameter_index_i,
@@ -108,38 +108,13 @@ __device__ void calculate_hessian_lse_complex(
     char *user_info,
     std::size_t const user_info_size)
 {
-    REAL const deviation = data[point_index] - value[point_index];
-
-    REAL d1 = derivative[parameter_index_i];
-    REAL d2 = derivative[parameter_index_j];
-
-    if (parameter_index_i % 4 == 1 && deviation <= 0)
-    {
-        d1 *= -1;
-    }
-
-    if (parameter_index_i % 4 != 1 && deviation > 0)
-    {
-        d1 *= -1;
-    }
-
-    if (parameter_index_j % 4 == 1 && deviation <= 0)
-    {
-        d2 *= -1;
-    }
-
-    if (parameter_index_j % 4 != 1 && deviation > 0)
-    {
-        d2 *= -1;
-    }
-
     if (weight)
     {
-        *hessian += d1 * d2 * weight[point_index];
+        *hessian += derivative[parameter_index_i] * derivative[parameter_index_j] * weight[point_index];
     }
     else
     {
-        *hessian += d1 * d2;
+        *hessian += derivative[parameter_index_i] * derivative[parameter_index_j];
     }
 }
 
@@ -180,7 +155,7 @@ __device__ void calculate_hessian_lse_complex(
  *
  */
 
-__device__ void calculate_gradient_lse_complex(
+__device__ void calculate_gradient_modified_lse(
     volatile REAL *gradient,
     int const point_index,
     int const parameter_index,

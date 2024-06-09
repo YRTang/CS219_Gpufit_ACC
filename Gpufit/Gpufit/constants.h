@@ -26,7 +26,8 @@ enum EstimatorID
 {
     LSE = 0,
     MLE = 1,
-    LSE_COMPLEX = 2
+    LSE_COMPLEX = 2,
+    MODIFIED_LSE = 3
 };
 
 // fit state
