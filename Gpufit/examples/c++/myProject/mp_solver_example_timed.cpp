@@ -42,10 +42,10 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 			// initial_parameters[i * n_model_parameters + p * 4 + 2] = creal(mp_profile->h[p]);
 			// initial_parameters[i * n_model_parameters + p * 4 + 3] = cimag(mp_profile->h[p]);
 
-			initial_parameters[i * n_model_parameters + p * 4 + 0] = 0.01; // 4: t, v, h_real, h_imag
-			initial_parameters[i * n_model_parameters + p * 4 + 1] = 0.01;
-			initial_parameters[i * n_model_parameters + p * 4 + 2] = 0.01;
-			initial_parameters[i * n_model_parameters + p * 4 + 3] = 0.01;
+			initial_parameters[i * n_model_parameters + p * 4 + 0] = 0.1; // 4: t, v, h_real, h_imag
+			initial_parameters[i * n_model_parameters + p * 4 + 1] = 0.1;
+			initial_parameters[i * n_model_parameters + p * 4 + 2] = 0.1;
+			initial_parameters[i * n_model_parameters + p * 4 + 3] = 0.1;
 		}
 		initial_parameters[i * n_model_parameters + 2] = 1;
 	}
@@ -107,35 +107,6 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 		throw std::runtime_error(gpufit_get_last_error());
 	}
 
-	// examine output_parameters --> Matrix[3x4]
-	cout << "size=" << output_parameters.size() << endl;
-	for (int j=0; j<3; j++){
-		for (int i = 0; i < 4; i++)
-		{
-			printf("%.5f ", output_parameters.data()[3*j+i]);
-		}
-		printf("\n");
-	}
-
-	cout << endl
-		 << "iteration number: " << endl;
-	for (int i : output_number_iterations)
-	{
-		cout << i << endl;
-	}
-
-	// get fit states
-	std::vector< int > output_states_histogram(5, 0);
-	for (std::vector< int >::iterator it = output_states.begin(); it != output_states.end(); ++it)
-	{
-		output_states_histogram[*it]++;
-	}
-
-	std::cout << "ratio converged              " << (REAL) output_states_histogram[0] / n_fits << "\n";
-	std::cout << "ratio max iteration exceeded " << (REAL) output_states_histogram[1] / n_fits << "\n";
-	std::cout << "ratio singular hessian       " << (REAL) output_states_histogram[2] / n_fits << "\n";
-	std::cout << "ratio neg curvature MLE      " << (REAL) output_states_histogram[3] / n_fits << "\n";
-	std::cout << "ratio gpu not read           " << (REAL) output_states_histogram[4] / n_fits << "\n";
 }
 
 int main(int argc, char *argv[])
@@ -146,6 +117,11 @@ int main(int argc, char *argv[])
 	reader.readData();
 	mp_config_t mp_config = reader.getData();
 
+	auto t1 = chrono::high_resolution_clock::now();
 	mp_solver_example(&mp_profile, &mp_config);
+	auto t2 = chrono::high_resolution_clock::now();
+	chrono::duration<double, std::milli> ms_double = t2 - t1;
+	cout << "execution time:" << ms_double.count() << "ms" << endl;
+
 	return 0;
 }

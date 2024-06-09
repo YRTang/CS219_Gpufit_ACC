@@ -226,7 +226,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "Cpufit/python/CMakeFiles/PYTHON_PACKAGE_CPUFIT.dir/DependInfo.cmake"
   "Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/DependInfo.cmake"
   "Gpufit/CMakeFiles/Gpufit.dir/DependInfo.cmake"
-  "Gpufit/examples/CMakeFiles/mp_solver_example.dir/DependInfo.cmake"
+  "Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/DependInfo.cmake"
   "Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/DependInfo.cmake"
   "Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/DependInfo.cmake"
   "examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/DependInfo.cmake"

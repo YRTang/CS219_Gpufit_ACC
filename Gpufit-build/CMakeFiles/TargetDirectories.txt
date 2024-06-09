@@ -48,7 +48,7 @@
 /home/test/sarahTang/Gpufit-build/Gpufit/CMakeFiles/test.dir
 /home/test/sarahTang/Gpufit-build/Gpufit/CMakeFiles/edit_cache.dir
 /home/test/sarahTang/Gpufit-build/Gpufit/CMakeFiles/rebuild_cache.dir
-/home/test/sarahTang/Gpufit-build/Gpufit/examples/CMakeFiles/mp_solver_example.dir
+/home/test/sarahTang/Gpufit-build/Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir
 /home/test/sarahTang/Gpufit-build/Gpufit/examples/CMakeFiles/test.dir
 /home/test/sarahTang/Gpufit-build/Gpufit/examples/CMakeFiles/edit_cache.dir
 /home/test/sarahTang/Gpufit-build/Gpufit/examples/CMakeFiles/rebuild_cache.dir

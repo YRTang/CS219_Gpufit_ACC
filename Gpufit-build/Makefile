@@ -582,17 +582,17 @@ Gpufit/fast:
 .PHONY : Gpufit/fast
 
 #=============================================================================
-# Target rules for targets named mp_solver_example
+# Target rules for targets named mp_solver_example_timed
 
 # Build rule for target.
-mp_solver_example: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mp_solver_example
-.PHONY : mp_solver_example
+mp_solver_example_timed: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mp_solver_example_timed
+.PHONY : mp_solver_example_timed
 
 # fast build rule for target.
-mp_solver_example/fast:
-	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/build
-.PHONY : mp_solver_example/fast
+mp_solver_example_timed/fast:
+	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/build
+.PHONY : mp_solver_example_timed/fast
 
 #=============================================================================
 # Target rules for targets named PYTHON_PACKAGE
@@ -694,7 +694,7 @@ help:
 	@echo "... Gpufit"
 	@echo "... Gpufit_Cpufit_Nvidia_Profiler_Test"
 	@echo "... Gpufit_Cpufit_Performance_Comparison"
-	@echo "... mp_solver_example"
+	@echo "... mp_solver_example_timed"
 .PHONY : help
 
 

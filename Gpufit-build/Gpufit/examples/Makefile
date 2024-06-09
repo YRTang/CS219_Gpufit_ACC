@@ -127,42 +127,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule
-.PHONY : Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule
+Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/rule:
+	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/rule
+.PHONY : Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/rule
 
 # Convenience name for target.
-mp_solver_example: Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule
-.PHONY : mp_solver_example
+mp_solver_example_timed: Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/rule
+.PHONY : mp_solver_example_timed
 
 # fast build rule for target.
-mp_solver_example/fast:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/build
-.PHONY : mp_solver_example/fast
+mp_solver_example_timed/fast:
+	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/build
+.PHONY : mp_solver_example_timed/fast
 
-mp_solver_example.o: mp_solver_example.cpp.o
-.PHONY : mp_solver_example.o
+mp_solver_example_timed.o: mp_solver_example_timed.cpp.o
+.PHONY : mp_solver_example_timed.o
 
 # target to build an object file
-mp_solver_example.cpp.o:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/mp_solver_example.cpp.o
-.PHONY : mp_solver_example.cpp.o
+mp_solver_example_timed.cpp.o:
+	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/mp_solver_example_timed.cpp.o
+.PHONY : mp_solver_example_timed.cpp.o
 
-mp_solver_example.i: mp_solver_example.cpp.i
-.PHONY : mp_solver_example.i
+mp_solver_example_timed.i: mp_solver_example_timed.cpp.i
+.PHONY : mp_solver_example_timed.i
 
 # target to preprocess a source file
-mp_solver_example.cpp.i:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/mp_solver_example.cpp.i
-.PHONY : mp_solver_example.cpp.i
+mp_solver_example_timed.cpp.i:
+	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/mp_solver_example_timed.cpp.i
+.PHONY : mp_solver_example_timed.cpp.i
 
-mp_solver_example.s: mp_solver_example.cpp.s
-.PHONY : mp_solver_example.s
+mp_solver_example_timed.s: mp_solver_example_timed.cpp.s
+.PHONY : mp_solver_example_timed.s
 
 # target to generate assembly for a file
-mp_solver_example.cpp.s:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/mp_solver_example.cpp.s
-.PHONY : mp_solver_example.cpp.s
+mp_solver_example_timed.cpp.s:
+	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example_timed.dir/mp_solver_example_timed.cpp.s
+.PHONY : mp_solver_example_timed.cpp.s
 
 # Help Target
 help:
@@ -173,10 +173,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... mp_solver_example"
-	@echo "... mp_solver_example.o"
-	@echo "... mp_solver_example.i"
-	@echo "... mp_solver_example.s"
+	@echo "... mp_solver_example_timed"
+	@echo "... mp_solver_example_timed.o"
+	@echo "... mp_solver_example_timed.i"
+	@echo "... mp_solver_example_timed.s"
 .PHONY : help
 
 
