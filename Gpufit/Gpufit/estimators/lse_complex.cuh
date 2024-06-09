@@ -185,7 +185,6 @@ __device__ void calculate_gradient_lse_complex(
     {
         gradient[point_index] = derivative[parameter_index * 2] * real_d + derivative[parameter_index * 2 + 1] * image_n_d;
     }
-    printf("derivative_gradient=%.3f\n", gradient[point_index]);
 }
 
 #endif
