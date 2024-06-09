@@ -5,8 +5,10 @@
 
 /***
  * parameters:
- *  tau, nu, h_real, h_imaginary
- *  p[0], p[1], p[2], p[3]
+ *  tau1, nu1, h_real1, h_imaginary1, 
+ *  tau2, nu2, h_real2, h_imaginary2,
+ *  tau3, nu3, h_real3, h_imaginary3
+ *  p[0], p[1], p[4], p[3]
  *
  * n_fits (number of fits)
  *  number of estimation tasks to be performed at 1 time (custom)
@@ -15,11 +17,11 @@
  *  pilot number
  *
  * value
- *  estimated y
+ *  real part of estimated y,
+ *  imaginary part of estimated y
  *
  * user_info
- *  m, n, y_real, y_imaginary
- *
+ *  contains m, n
  *
  */
 __device__ void calculate_channel_eq(
@@ -38,6 +40,7 @@ __device__ void calculate_channel_eq(
     REAL *user_info_float = (REAL *)user_info;
     REAL m, n = 0;
     REAL const *p = parameters;
+    int size = parameters.size();
 
     int const chunk_begin = chunk_index * n_fits * n_points * 2;
     int const fit_begin = fit_index * n_points;
@@ -45,53 +48,70 @@ __device__ void calculate_channel_eq(
     n = user_info_float[chunk_begin + fit_begin + point_index * 2 + 1];
 
     ///////////////////////////// value //////////////////////////////
+    REAL * periodic = new REAL[size];
+    value[point_index * 2] = 0;
+    value[point_index * 2 + 1] = 0;
 
-    REAL const A = cos(2 * M_PI * (m * p[0] - n * p[1]));
-    REAL const B = sin(2 * M_PI * (m * p[0] - n * p[1]));
-
-    // calculate estimated y
-    value[point_index * 2] = A * p[2] - B * p[3];     // real part of estimated y
-    value[point_index * 2 + 1] = A * p[3] + B * p[2]; // imaginary part of estimated y
+    for(int i = 0; i < size; i++)
+    {
+        // cos and sin using tau_i+1, mu_i+1, and h_i+1
+        periodic[2 * i] = cos(2 * M_PI * (m * p[4 * i] - n * p[4 * i + 1]));
+        periodic[2 * i + 1] = sin(2 * M_PI * (m * p[4 * i] - n * p[4 * i + 1]));
+        // real part of estimated y
+        value[point_index * 2] +=  periodic[2 * i] * p[4 * i + 2] - periodic[2 * i + 1] * p[4* i + 3];     
+        // imaginary part of estimated y
+        value[point_index * 2 + 1] += periodic[2 * i] * p[4 * i + 3] + periodic[2 * i + 1] * p[4 * i + 2]; 
+    }
 
     /////////////////////////// derivative ///////////////////////////
-    REAL *current_derivative = derivative + point_index;
+    REAL *current_derivative = derivative + point_index * 2;
 
-    // derivative of real part of y
+    /**
+     * derivative of real part of y
+     * dtau1_real, dtau1_img, dtau2_real, dtau2_img, dtau3_real, dtau3_img
+     * dnu1_real, dnu1_img, dnu2_real, dnu2_img, dnu3_real, dnu3_img
+     * dhreal1_real, dhreal1_img, dhreal2_real, dhreal2_img, dhreal3_real, dhreal3_img
+     * dhimg1_real, dhimg1_img, dhimg2_real, dhimg2_img, dhimg3_real, dhimg3_img
+     */
 
     // derivative wrt tau
-    for (int i = 0; i < 3; i++)
-        current_derivative[i * 2 * n_points] = -2 * M_PI * m * B * p[2] - 2 * M_PI * m * A * p[3];
+    // derivative targeted index: 0, 
+    for(int i = 0; i < size; i++)
+        current_derivative[i * 2 * n_points] = -2 * M_PI * m * periodic[2 * i + 1] * p[4 * i + 2] 
+                                                - 2 * M_PI * m * periodic[2 * i] * p[4 * i + 3];
 
     // derivative wrt nu
-    for (int i = 0; i < 3; i++)
-        current_derivative[(i + 3) * 2 * n_points] = 2 * M_PI * n * B * p[2] + 2 * M_PI * n * A * p[3];
+    for(int i = 0; i < size; i++)
+        current_derivative[(i + 3) * 2 * n_points] = 2 * M_PI * n * periodic[2 * i + 1] * p[4 * i + 2] 
+                                                    + 2 * M_PI * n * periodic[2 * i] * p[4 * i + 3];
 
     // derivative wrt h_real
-    for (int i = 0; i < 3; i++)
-        current_derivative[(i + 6) * 2 * n_points] = A;
+    for(int i = 0; i < size; i++)
+        current_derivative[(i + 6) * 2 * n_points] = periodic[2 * i];
 
     // derivative wrt h_img
-    // derivative wrt h_real
-    for (int i = 0; i < 3; i++)
-        current_derivative[(i + 9) * 2 * n_points] = -B;
+    for(int i = 0; i < size; i++)
+        current_derivative[(i + 9) * 2 * n_points] = -periodic[2 * i + 1];
 
     // derivative of imaginary part of y
 
     // derivative wrt tau
-    for (int i = 0; i < 3; i++)
-        current_derivative[(2 * i - 1) * n_points] = -2 * M_PI * m * B * p[3] + 2 * M_PI * m * A * p[2];
+    for(int i = 0; i < size; i++)
+        current_derivative[(2 * i + 1) * n_points] = -2 * M_PI * m * periodic[2 * i + 1] * p[4 * i + 3] 
+                                                    + 2 * M_PI * m * periodic[2 * i] * p[4 * i + 2];
 
     // derivative wrt nu
-    for (int i = 0; i < 3; i++)
-        current_derivative[(2 * i + 5) * n_points] = 2 * M_PI * n * B * p[3] - 2 * M_PI * n * A * p[2];
+    for(int i = 0; i < size; i++)
+        current_derivative[(2 * i + 7) * n_points] = 2 * M_PI * n * periodic[2 * i + 1] * p[4 * i + 3] 
+                                                    - 2 * M_PI * n * periodic[2 * i] * p[4 * i + 2];
 
     // derivative wrt h_real
-    for (int i = 0; i < 3; i++)
-        current_derivative[(2 * i + 11) * n_points] = A;
+    for(int i = 0; i < size; i++)
+        current_derivative[(2 * i + 13) * n_points] = periodic[2 * i];
 
     // derivative wrt h_img
-    for (int i = 0; i < 3; i++)
-        current_derivative[(2 * i + 17) * n_points] = B;
+    for(int i = 0; i < size; i++)
+        current_derivative[(2 * i + 19) * n_points] = periodic[2 * i + 1];
 }
 
 #endif
