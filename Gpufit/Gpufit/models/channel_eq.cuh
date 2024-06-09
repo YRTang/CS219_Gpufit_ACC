@@ -40,7 +40,11 @@ __device__ void calculate_channel_eq(
     REAL *user_info_float = (REAL *)user_info;
     REAL m, n = 0;
     REAL const *p = parameters;
-    int size = parameters.size();
+    /**
+     * path number set to 3 for convenience
+     * To do: need to find a way to extract it from parameter size
+     */
+    int size = 3; 
 
     int const chunk_begin = chunk_index * n_fits * n_points * 2;
     int const fit_begin = fit_index * n_points;
@@ -48,7 +52,9 @@ __device__ void calculate_channel_eq(
     n = user_info_float[chunk_begin + fit_begin + point_index * 2 + 1];
 
     ///////////////////////////// value //////////////////////////////
+    // for storing the intermediate periodic function calculations
     REAL * periodic = new REAL[size];
+    // initialize real and imaginary part of estimated y to 0
     value[point_index * 2] = 0;
     value[point_index * 2 + 1] = 0;
 
