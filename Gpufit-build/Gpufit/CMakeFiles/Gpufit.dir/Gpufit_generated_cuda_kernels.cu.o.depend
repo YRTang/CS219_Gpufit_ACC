@@ -6,6 +6,7 @@ SET(CUDA_NVCC_DEPEND
  "/home/test/sarahTang/Gpufit/Gpufit/definitions.h"
  "/home/test/sarahTang/Gpufit/Gpufit/estimators/estimators.cuh"
  "/home/test/sarahTang/Gpufit/Gpufit/estimators/lse.cuh"
+ "/home/test/sarahTang/Gpufit/Gpufit/estimators/lse_complex.cuh"
  "/home/test/sarahTang/Gpufit/Gpufit/estimators/mle.cuh"
  "/home/test/sarahTang/Gpufit/Gpufit/models/brown_dennis.cuh"
  "/home/test/sarahTang/Gpufit/Gpufit/models/cauchy_2d_elliptic.cuh"

@@ -192,7 +192,7 @@ Gpufit/clean: Gpufit/java/clean
 # Directory level rules for directory Gpufit/examples
 
 # Recursive "all" directory target.
-Gpufit/examples/all: Gpufit/examples/CMakeFiles/mp_solver.dir/all
+Gpufit/examples/all: Gpufit/examples/CMakeFiles/mp_solver_example.dir/all
 .PHONY : Gpufit/examples/all
 
 # Recursive "preinstall" directory target.
@@ -200,7 +200,7 @@ Gpufit/examples/preinstall:
 .PHONY : Gpufit/examples/preinstall
 
 # Recursive "clean" directory target.
-Gpufit/examples/clean: Gpufit/examples/CMakeFiles/mp_solver.dir/clean
+Gpufit/examples/clean: Gpufit/examples/CMakeFiles/mp_solver_example.dir/clean
 .PHONY : Gpufit/examples/clean
 
 #=============================================================================
@@ -1177,30 +1177,30 @@ Gpufit/CMakeFiles/Gpufit.dir/clean:
 .PHONY : Gpufit/CMakeFiles/Gpufit.dir/clean
 
 #=============================================================================
-# Target rules for target Gpufit/examples/CMakeFiles/mp_solver.dir
+# Target rules for target Gpufit/examples/CMakeFiles/mp_solver_example.dir
 
 # All Build rule for target.
-Gpufit/examples/CMakeFiles/mp_solver.dir/all: Gpufit/CMakeFiles/Gpufit.dir/all
-	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver.dir/build.make Gpufit/examples/CMakeFiles/mp_solver.dir/depend
-	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver.dir/build.make Gpufit/examples/CMakeFiles/mp_solver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=27,28 "Built target mp_solver"
-.PHONY : Gpufit/examples/CMakeFiles/mp_solver.dir/all
+Gpufit/examples/CMakeFiles/mp_solver_example.dir/all: Gpufit/CMakeFiles/Gpufit.dir/all
+	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/depend
+	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=27,28 "Built target mp_solver_example"
+.PHONY : Gpufit/examples/CMakeFiles/mp_solver_example.dir/all
 
 # Build rule for subdir invocation for target.
-Gpufit/examples/CMakeFiles/mp_solver.dir/rule: cmake_check_build_system
+Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 13
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/CMakeFiles/mp_solver.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/CMakeFiles/mp_solver_example.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
-.PHONY : Gpufit/examples/CMakeFiles/mp_solver.dir/rule
+.PHONY : Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule
 
 # Convenience name for target.
-mp_solver: Gpufit/examples/CMakeFiles/mp_solver.dir/rule
-.PHONY : mp_solver
+mp_solver_example: Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule
+.PHONY : mp_solver_example
 
 # clean rule for target.
-Gpufit/examples/CMakeFiles/mp_solver.dir/clean:
-	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver.dir/build.make Gpufit/examples/CMakeFiles/mp_solver.dir/clean
-.PHONY : Gpufit/examples/CMakeFiles/mp_solver.dir/clean
+Gpufit/examples/CMakeFiles/mp_solver_example.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/clean
+.PHONY : Gpufit/examples/CMakeFiles/mp_solver_example.dir/clean
 
 #=============================================================================
 # Target rules for target Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir
