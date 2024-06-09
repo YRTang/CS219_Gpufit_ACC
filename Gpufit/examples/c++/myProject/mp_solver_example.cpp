@@ -6,7 +6,7 @@
 #include <iostream>
 #include <math.h>
 
-#define CSV_PATH "../Gpufit/examples/c++/myProject/sample_input.csv"
+#define CSV_PATH "../Gpufit/examples/c++/myProject/sample_input_test.csv"
 
 void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 {
@@ -38,11 +38,12 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 			// initial_parameters[i * n_model_parameters + p * 4 + 2] = creal(mp_profile->h[p]);
 			// initial_parameters[i * n_model_parameters + p * 4 + 3] = cimag(mp_profile->h[p]);
 
-			initial_parameters[i * n_model_parameters + p * 4 + 0] = 0.5; // 4: t, v, h_real, h_imag
-			initial_parameters[i * n_model_parameters + p * 4 + 1] = 0.5;
-			initial_parameters[i * n_model_parameters + p * 4 + 2] = 0.5;
-			initial_parameters[i * n_model_parameters + p * 4 + 3] = 0.5;
+			initial_parameters[i * n_model_parameters + p * 4 + 0] = 0.3; // 4: t, v, h_real, h_imag
+			initial_parameters[i * n_model_parameters + p * 4 + 1] = 0.3;
+			initial_parameters[i * n_model_parameters + p * 4 + 2] = 0.3;
+			initial_parameters[i * n_model_parameters + p * 4 + 3] = 0.3;
 		}
+		initial_parameters[i * n_model_parameters + 2] = 1;
 	}
 
 	// generate data
