@@ -38,10 +38,10 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 			// initial_parameters[i * n_model_parameters + p * 4 + 2] = creal(mp_profile->h[p]);
 			// initial_parameters[i * n_model_parameters + p * 4 + 3] = cimag(mp_profile->h[p]);
 
-			initial_parameters[i * n_model_parameters + p * 4 + 0] = 0.3; // 4: t, v, h_real, h_imag
-			initial_parameters[i * n_model_parameters + p * 4 + 1] = 0.3;
-			initial_parameters[i * n_model_parameters + p * 4 + 2] = 0.3;
-			initial_parameters[i * n_model_parameters + p * 4 + 3] = 0.3;
+			initial_parameters[i * n_model_parameters + p * 4 + 0] = 0.01; // 4: t, v, h_real, h_imag
+			initial_parameters[i * n_model_parameters + p * 4 + 1] = 0.01;
+			initial_parameters[i * n_model_parameters + p * 4 + 2] = 0.01;
+			initial_parameters[i * n_model_parameters + p * 4 + 3] = 0.01;
 		}
 		initial_parameters[i * n_model_parameters + 2] = 1;
 	}
@@ -58,7 +58,7 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	}
 
 	// tolerance
-	REAL const tolerance = 0.1f;
+	REAL const tolerance = 0.001f;
 
 	// maximum number of iterations
 	int const max_number_iterations = 20;
@@ -105,9 +105,19 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 
 	// examine output_parameters --> Matrix[3x4]
 	cout << "size=" << output_parameters.size() << endl;
-	for (int i = 0; i < 12; i++)
+	for (int j=0; j<3; j++){
+		for (int i = 0; i < 4; i++)
+		{
+			printf("%.5f ", output_parameters.data()[3*j+i]);
+		}
+		printf("\n");
+	}
+
+	cout << endl
+		 << "iteration number: " << endl;
+	for (int i : output_number_iterations)
 	{
-		cout << output_parameters.data()[i] << endl;
+		cout << i << endl;
 	}
 
 	// get fit states
