@@ -6,7 +6,11 @@
 #include <iostream>
 #include <math.h>
 
-#define CSV_PATH "../Gpufit/examples/c++/myProject/sample_input.csv"
+#include <immintrin.h>
+#include <chrono>
+#include <complex.h>
+
+#define CSV_PATH "../Gpufit/examples/c++/myProject/sample_input_test.csv"
 
 void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 {
@@ -37,11 +41,12 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 			// initial_parameters[i * n_model_parameters + p * 4 + 2] = creal(mp_profile->h[p]);
 			// initial_parameters[i * n_model_parameters + p * 4 + 3] = cimag(mp_profile->h[p]);
 
-			initial_parameters[i * n_model_parameters + p * 4 + 0] = 0.5; // 4: t, v, h_real, h_imag
-			initial_parameters[i * n_model_parameters + p * 4 + 1] = 0.5;
-			initial_parameters[i * n_model_parameters + p * 4 + 2] = 0.5;
-			initial_parameters[i * n_model_parameters + p * 4 + 3] = 0.5;
+			initial_parameters[i * n_model_parameters + p * 4 + 0] = 0; // 4: t, v, h_real, h_imag
+			initial_parameters[i * n_model_parameters + p * 4 + 1] = 0;
+			initial_parameters[i * n_model_parameters + p * 4 + 2] = 1; //h[0]=h[1]=h[2]=1
+			initial_parameters[i * n_model_parameters + p * 4 + 3] = 0;
 		}
+		// initial_parameters[i * n_model_parameters + 2] = 1; //h[0]=1
 	}
 
 	// generate data
@@ -61,7 +66,7 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	REAL const tolerance = 0.001f;
 
 	// maximum number of iterations
-	int const max_number_iterations = 20;
+	int const max_number_iterations = 40;
 
 	// estimator ID
 	int const estimator_id = LSE_COMPLEX;
@@ -146,7 +151,11 @@ int main(int argc, char *argv[])
 	reader.readData();
 	mp_config_t mp_config = reader.getData();
 
+	auto t1 = chrono::high_resolution_clock::now();
 	mp_solver_example(&mp_profile, &mp_config);
+	auto t2 = chrono::high_resolution_clock::now();
+	chrono::duration<double, std::milli> ms_double = t2 - t1;
+	cout << "execution time:" << ms_double.count() << "ms" << endl;
 
 	std::cout << std::endl
 			  << "Example completed!" << std::endl;
