@@ -59,6 +59,8 @@ __device__ void calculate_chi_square_lse_complex(
     {
         chi_square[point_index] = real_d * real_d + image_n_d * image_n_d;
     }
+
+    // printf("derivative_chi=%.3f\n", chi_square[point_index]);
 }
 
 /* Description of the calculate_hessian_lse function
@@ -119,6 +121,7 @@ __device__ void calculate_hessian_lse_complex(
     {
         *hessian += derivative[parameter_index_i * 2] * derivative[parameter_index_j * 2] + derivative[parameter_index_i * 2 + 1] * derivative[parameter_index_j * 2 + 1];
     }
+    // printf("derivative_hessian=%.3f\n", *hessian);
 }
 
 /* Description of the calculate_gradient_lse function
@@ -182,6 +185,7 @@ __device__ void calculate_gradient_lse_complex(
     {
         gradient[point_index] = derivative[parameter_index * 2] * real_d + derivative[parameter_index * 2 + 1] * image_n_d;
     }
+    printf("derivative_gradient=%.3f\n", gradient[point_index]);
 }
 
 #endif

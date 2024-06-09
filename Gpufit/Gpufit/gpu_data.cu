@@ -47,8 +47,8 @@ GPUData::GPUData(Info const & info) :
             info_.max_chunk_size_ * info_.n_blocks_per_fit_)
         : 0),
 
-    values_( info_.max_chunk_size_ * info_.n_points_ * 2),
-    derivatives_( info_.max_chunk_size_ * info_.n_points_ * info_.n_parameters_ * 2),
+    values_( info_.max_chunk_size_ * info_.n_points_ * 2),  //edited
+    derivatives_( info_.max_chunk_size_ * info_.n_points_ * info_.n_parameters_ *2),    //edited
 
     lambdas_( info_.max_chunk_size_ ),
 

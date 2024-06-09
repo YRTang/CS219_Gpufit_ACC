@@ -58,13 +58,13 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	}
 
 	// tolerance
-	REAL const tolerance = 0.001f;
+	REAL const tolerance = 0.1f;
 
 	// maximum number of iterations
 	int const max_number_iterations = 20;
 
 	// estimator ID
-	int const estimator_id = MLE;
+	int const estimator_id = LSE_COMPLEX;
 
 	// model ID
 	int const model_id = CHANNEL_EQ;
@@ -103,13 +103,25 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 		throw std::runtime_error(gpufit_get_last_error());
 	}
 
-	// examine output_parameters
-	//  Matrix[3x4]
+	// examine output_parameters --> Matrix[3x4]
 	cout << "size=" << output_parameters.size() << endl;
 	for (int i = 0; i < 12; i++)
 	{
 		cout << output_parameters.data()[i] << endl;
 	}
+
+	// get fit states
+	std::vector< int > output_states_histogram(5, 0);
+	for (std::vector< int >::iterator it = output_states.begin(); it != output_states.end(); ++it)
+	{
+		output_states_histogram[*it]++;
+	}
+
+	std::cout << "ratio converged              " << (REAL) output_states_histogram[0] / n_fits << "\n";
+	std::cout << "ratio max iteration exceeded " << (REAL) output_states_histogram[1] / n_fits << "\n";
+	std::cout << "ratio singular hessian       " << (REAL) output_states_histogram[2] / n_fits << "\n";
+	std::cout << "ratio neg curvature MLE      " << (REAL) output_states_histogram[3] / n_fits << "\n";
+	std::cout << "ratio gpu not read           " << (REAL) output_states_histogram[4] / n_fits << "\n";
 }
 
 int main(int argc, char *argv[])

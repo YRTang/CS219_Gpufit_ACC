@@ -38,6 +38,7 @@ __device__ void calculate_channel_eq(
 {
     ///////////////////////////// modify user_info //////////////////////////////
     REAL *user_info_float = (REAL *)user_info;
+    
     REAL m, n = 0;
     REAL const *p = parameters;
     /**
@@ -50,6 +51,9 @@ __device__ void calculate_channel_eq(
     int const fit_begin = fit_index * n_points;
     m = user_info_float[chunk_begin + fit_begin + point_index * 2];
     n = user_info_float[chunk_begin + fit_begin + point_index * 2 + 1];
+    // printf("m=%.3f\n", m);
+    // printf("n=%3f\n", n);
+    // printf("\n");
 
     ///////////////////////////// value //////////////////////////////
     // for storing the intermediate periodic function calculations
@@ -58,6 +62,7 @@ __device__ void calculate_channel_eq(
     value[point_index * 2] = 0;
     value[point_index * 2 + 1] = 0;
 
+<<<<<<< Updated upstream
     for(int i = 0; i < size; i++)
     {
         // cos and sin using tau_i+1, mu_i+1, and h_i+1
@@ -68,6 +73,14 @@ __device__ void calculate_channel_eq(
         // imaginary part of estimated y
         value[point_index * 2 + 1] += periodic[2 * i] * p[4 * i + 3] + periodic[2 * i + 1] * p[4 * i + 2]; 
     }
+=======
+    REAL const A = cos(-2 * M_PI * (m * p[0] - n * p[1]));  // REAL const A = cos(2 * M_PI * (m * p[0] - n * p[1]));
+    REAL const B = sin(-2 * M_PI * (m * p[0] - n * p[1]));  // REAL const B = sin(2 * M_PI * (m * p[0] - n * p[1]));
+    
+    // calculate estimated y
+    value[point_index * 2] = A * p[2] - B * p[3];     // real part of estimated y
+    value[point_index * 2 + 1] = A * p[3] + B * p[2]; // imaginary part of estimated y
+>>>>>>> Stashed changes
 
     /////////////////////////// derivative ///////////////////////////
     REAL *current_derivative = derivative + point_index * 2;
