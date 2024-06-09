@@ -50,5 +50,11 @@ make
 
 ## Instructions
 ```
-
+cd Gpufit-build/
+rm * -rf
+cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_C_COMPILER=gcc-12 ../Gpufit
+make
 ```
+
+## Notes
+To customize our model channel_eq, we change allocation of the gpufit library. In gpu_data file Line50-51, we multiply the size of values_ annd derivatives_ by two to incorporate both real and imaginery numbers of our target y.
