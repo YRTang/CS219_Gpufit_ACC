@@ -19,15 +19,15 @@
 
 __device__ void calculate_model(
     ModelID const model_id,
-    REAL const * parameters,
+    REAL const *parameters,
     int const n_fits,
     int const n_points,
-    REAL * value,
-    REAL * derivative,
+    REAL *value,
+    REAL *derivative,
     int const point_index,
     int const fit_index,
     int const chunk_index,
-    char * user_info,
+    char *user_info,
     int const user_info_size)
 {
     switch (model_id)
@@ -79,25 +79,68 @@ __device__ void calculate_model(
     }
 }
 
-void configure_model(ModelID const model_id, int & n_parameters, int & n_dimensions)
+void configure_model(ModelID const model_id, int &n_parameters, int &n_dimensions)
 {
     switch (model_id)
     {
-    case GAUSS_1D:              n_parameters = 4; n_dimensions = 1; break;
-    case GAUSS_2D:              n_parameters = 5; n_dimensions = 2; break;
-    case GAUSS_2D_ELLIPTIC:     n_parameters = 6; n_dimensions = 2; break;
-    case GAUSS_2D_ROTATED:      n_parameters = 7; n_dimensions = 2; break;
-    case CAUCHY_2D_ELLIPTIC:    n_parameters = 6; n_dimensions = 2; break;
-    case LINEAR_1D:             n_parameters = 2; n_dimensions = 1; break;
-    case FLETCHER_POWELL_HELIX: n_parameters = 3; n_dimensions = 1; break;
-    case BROWN_DENNIS:          n_parameters = 4; n_dimensions = 1; break;
-    case SPLINE_1D:             n_parameters = 3; n_dimensions = 1; break;
-    case SPLINE_2D:             n_parameters = 4; n_dimensions = 2; break;
-    case SPLINE_3D:             n_parameters = 5; n_dimensions = 3; break;
-    case SPLINE_3D_MULTICHANNEL:         n_parameters = 5; n_dimensions = 4; break;
-    case SPLINE_3D_PHASE_MULTICHANNEL:   n_parameters = 6; n_dimensions = 4; break;
-    case CHANNEL_EQ:            n_parameters = 12; n_dimensions = 4; break;
-    default: throw std::runtime_error("unknown model ID");
+    case GAUSS_1D:
+        n_parameters = 4;
+        n_dimensions = 1;
+        break;
+    case GAUSS_2D:
+        n_parameters = 5;
+        n_dimensions = 2;
+        break;
+    case GAUSS_2D_ELLIPTIC:
+        n_parameters = 6;
+        n_dimensions = 2;
+        break;
+    case GAUSS_2D_ROTATED:
+        n_parameters = 7;
+        n_dimensions = 2;
+        break;
+    case CAUCHY_2D_ELLIPTIC:
+        n_parameters = 6;
+        n_dimensions = 2;
+        break;
+    case LINEAR_1D:
+        n_parameters = 2;
+        n_dimensions = 1;
+        break;
+    case FLETCHER_POWELL_HELIX:
+        n_parameters = 3;
+        n_dimensions = 1;
+        break;
+    case BROWN_DENNIS:
+        n_parameters = 4;
+        n_dimensions = 1;
+        break;
+    case SPLINE_1D:
+        n_parameters = 3;
+        n_dimensions = 1;
+        break;
+    case SPLINE_2D:
+        n_parameters = 4;
+        n_dimensions = 2;
+        break;
+    case SPLINE_3D:
+        n_parameters = 5;
+        n_dimensions = 3;
+        break;
+    case SPLINE_3D_MULTICHANNEL:
+        n_parameters = 5;
+        n_dimensions = 4;
+        break;
+    case SPLINE_3D_PHASE_MULTICHANNEL:
+        n_parameters = 6;
+        n_dimensions = 4;
+        break;
+    case CHANNEL_EQ:
+        n_parameters = 12;
+        n_dimensions = 2;
+        break;
+    default:
+        throw std::runtime_error("unknown model ID");
     }
 }
 

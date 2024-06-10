@@ -45,10 +45,18 @@ __device__ void calculate_channel_eq(
 #define H_REAL(x) parameters[x * 4 + 2]
 #define H_IMAG(x) parameters[x * 4 + 3]
 
-    int const chunk_begin = chunk_index * n_fits * n_points * 2;
-    int const fit_begin = fit_index * n_points;
-    m = user_info_float[chunk_begin + fit_begin + point_index * 2];
-    n = user_info_float[chunk_begin + fit_begin + point_index * 2 + 1];
+    if (user_info_size / sizeof(REAL) == 2 * n_points)
+    {
+        m = user_info_float[point_index * 2];
+        n = user_info_float[point_index * 2 + 1];
+    }
+    else if (user_info_size / sizeof(REAL) > 2 * n_points)
+    {
+        int const chunk_begin = chunk_index * n_fits * n_points * 2;
+        int const fit_begin = fit_index * n_points * 2;
+        m = user_info_float[chunk_begin + fit_begin + point_index * 2];
+        n = user_info_float[chunk_begin + fit_begin + point_index * 2 + 1];
+    }
 
     ///////////////////////////// value //////////////////////////////
 

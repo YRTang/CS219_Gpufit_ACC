@@ -1,5 +1,4 @@
 #include "../../../Gpufit/gpufit.h"
-#include "mp_solver.h"
 #include "csv_reader.h"
 #include <vector>
 #include <random>
@@ -10,16 +9,12 @@
 #include <chrono>
 #include <complex.h>
 
-#include <cstdlib>
-#include <iostream>
-#include <time.h>
-
-#define CSV_PATH "../Gpufit/examples/c++/myProject/sample_input.csv"
+#define CSV_PATH "/home/alex/sp24/cs219/Gpufit/examples/c++/myProject/sample_input.csv"
 
 void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 {
 	// number of fits, fit points and parameters
-	std::size_t const n_fits = 1;
+	std::size_t const n_fits = 10000;
 	std::size_t const n_points_per_fit = mp_config->nof_pilots; //=32
 	std::size_t const n_model_parameters = 12;
 
@@ -62,7 +57,7 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 			/* data[j * n_fits + 2 * i] = creal(mp_config->y[i]);
 			data[j * n_fits + 2 * i + 1] = cimag(mp_config->y[i]); */
 
-			data[j * n_fits + i] = creal(mp_config->y[i]) + cimag(mp_config->y[i]);
+			data[j * n_points_per_fit + i] = creal(mp_config->y[i]) + cimag(mp_config->y[i]);
 		}
 	}
 
@@ -144,83 +139,6 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	for (int i : output_states)
 	{
 		cout << i << endl;
-	}
-
-	cout << "=============== Convergence analysis ===================" << endl;
-	cout << "In this part, we test for differnt iterations on different prarmeter initialization\n \
-	 but the same data is used. To see whether the model really converge."
-		 << endl
-		 << endl;
-
-	int iter_times_test[] = {1, 2, 3, 4, 5, 10, 15, 20, 30, 50};
-
-	srand(time(0));
-	for (int x = 0; x < 10; x++)
-	{
-		REAL tau, nu, h_real, h_imag;
-		tau = rand();
-		nu = rand();
-		h_real = rand();
-		h_imag = rand();
-
-		for (int p = 0; p < mp_config->nof_paths; ++p)
-		{
-			// initial_parameters[i * n_model_parameters + p * 4 + 0] = mp_profile->tau[p]; // 4: t, v, h_real, h_imag
-			// initial_parameters[i * n_model_parameters + p * 4 + 1] = mp_profile->nu[p];
-			// initial_parameters[i * n_model_parameters + p * 4 + 2] = creal(mp_profile->h[p]);
-			// initial_parameters[i * n_model_parameters + p * 4 + 3] = cimag(mp_profile->h[p]);
-
-			initial_parameters[n_model_parameters + p * 4 + 0] = tau; // 4: t, v, h_real, h_imag
-			initial_parameters[n_model_parameters + p * 4 + 1] = nu;
-			initial_parameters[n_model_parameters + p * 4 + 2] = h_real; // h[0]=h[1]=h[2]=1
-			initial_parameters[n_model_parameters + p * 4 + 3] = h_imag;
-		}
-
-		cout << "Initialized parameters as ("
-			 << tau << ", " << nu << ", " << h_real << ", " << h_imag << ")" << endl;
-
-		for (int i = 0; i < 10; i++)
-		{
-			int const status = gpufit(
-				1,
-				n_points_per_fit,
-				data.data(),
-				0,
-				model_id,
-				initial_parameters.data(),
-				tolerance,
-				iter_times_test[i],
-				parameters_to_fit.data(),
-				estimator_id,
-				user_info_size,
-				reinterpret_cast<char *>(user_info.data()),
-				output_parameters.data(),
-				output_states.data(),
-				output_chi_square.data(),
-				output_number_iterations.data());
-
-			// check status
-			if (status != ReturnState::OK)
-			{
-				throw std::runtime_error(gpufit_get_last_error());
-			}
-
-			cout << "The chi-square under max-iteration " << iter_times_test[i] << " is "
-				 << output_chi_square[0] << endl;
-
-			cout << "The output parameters are " << endl;
-
-			// examine output_parameters
-			//  Matrix[3x4]
-			for (int k = 0; k < 12; k++)
-			{
-				if (k % 4 == 0 && k != 0)
-					cout << endl;
-				cout << output_parameters.data()[k] << " ";
-			}
-
-			cout << endl << endl;;
-		}
 	}
 }
 
