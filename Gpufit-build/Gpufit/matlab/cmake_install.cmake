@@ -1,4 +1,4 @@
-# Install script for directory: /home/test/sarahTang/Gpufit/Gpufit/matlab
+# Install script for directory: /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/matlab
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/test/sarahTang/Gpufit/examples/c++/myProject/mp_solver.cpp" "Gpufit/examples/CMakeFiles/mp_solver.dir/mp_solver.cpp.o" "gcc" "Gpufit/examples/CMakeFiles/mp_solver.dir/mp_solver.cpp.o.d"
+  "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/examples/c++/myProject/mp_solver_example.cpp" "Gpufit/examples/CMakeFiles/mp_solver_example.dir/mp_solver_example.cpp.o" "gcc" "Gpufit/examples/CMakeFiles/mp_solver_example.dir/mp_solver_example.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

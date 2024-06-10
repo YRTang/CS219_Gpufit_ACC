@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test/sarahTang/Gpufit
+CMAKE_SOURCE_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test/sarahTang/Gpufit-build
+CMAKE_BINARY_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build
 
 # Utility rule file for PYTHON_PACKAGE.
 
@@ -67,12 +67,12 @@ include Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/compiler_depend.make
 include Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/progress.make
 
 Gpufit/python/CMakeFiles/PYTHON_PACKAGE:
-	cd /home/test/sarahTang/Gpufit-build/Gpufit/python && /usr/bin/cmake -E remove_directory /home/test/sarahTang/Gpufit-build/./pyGpufit
-	cd /home/test/sarahTang/Gpufit-build/Gpufit/python && /usr/bin/cmake -E make_directory /home/test/sarahTang/Gpufit-build/./pyGpufit
-	cd /home/test/sarahTang/Gpufit-build/Gpufit/python && /usr/bin/cmake -E copy_if_different /home/test/sarahTang/Gpufit/Gpufit/python/README.txt /home/test/sarahTang/Gpufit/Gpufit/python/setup.py /home/test/sarahTang/Gpufit/Gpufit/python/setup.cfg /home/test/sarahTang/Gpufit-build/./pyGpufit
-	cd /home/test/sarahTang/Gpufit-build/Gpufit/python && /usr/bin/cmake -E make_directory /home/test/sarahTang/Gpufit-build/./pyGpufit/pygpufit
-	cd /home/test/sarahTang/Gpufit-build/Gpufit/python && /usr/bin/cmake -E copy_if_different /home/test/sarahTang/Gpufit/Gpufit/python/pygpufit/__init__.py /home/test/sarahTang/Gpufit/Gpufit/python/pygpufit/gpufit.py /home/test/sarahTang/Gpufit/Gpufit/python/pygpufit/version.py /home/test/sarahTang/Gpufit-build/./pyGpufit/pygpufit
-	cd /home/test/sarahTang/Gpufit-build/Gpufit/python && /usr/bin/cmake -E copy_if_different /home/test/sarahTang/Gpufit-build/Gpufit/libGpufit.so /home/test/sarahTang/Gpufit-build/./pyGpufit/pygpufit
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/python && /usr/bin/cmake -E remove_directory /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/./pyGpufit
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/python && /usr/bin/cmake -E make_directory /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/./pyGpufit
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/python && /usr/bin/cmake -E copy_if_different /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/python/README.txt /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/python/setup.py /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/python/setup.cfg /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/./pyGpufit
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/python && /usr/bin/cmake -E make_directory /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/./pyGpufit/pygpufit
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/python && /usr/bin/cmake -E copy_if_different /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/python/pygpufit/__init__.py /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/python/pygpufit/gpufit.py /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/python/pygpufit/version.py /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/./pyGpufit/pygpufit
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/python && /usr/bin/cmake -E copy_if_different /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/libGpufit.so /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/./pyGpufit/pygpufit
 
 PYTHON_PACKAGE: Gpufit/python/CMakeFiles/PYTHON_PACKAGE
 PYTHON_PACKAGE: Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/build.make
@@ -83,10 +83,10 @@ Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/build: PYTHON_PACKAGE
 .PHONY : Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/build
 
 Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/clean:
-	cd /home/test/sarahTang/Gpufit-build/Gpufit/python && $(CMAKE_COMMAND) -P CMakeFiles/PYTHON_PACKAGE.dir/cmake_clean.cmake
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/python && $(CMAKE_COMMAND) -P CMakeFiles/PYTHON_PACKAGE.dir/cmake_clean.cmake
 .PHONY : Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/clean
 
 Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/depend:
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test/sarahTang/Gpufit /home/test/sarahTang/Gpufit/Gpufit/python /home/test/sarahTang/Gpufit-build /home/test/sarahTang/Gpufit-build/Gpufit/python /home/test/sarahTang/Gpufit-build/Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/python /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/python /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/depend
 

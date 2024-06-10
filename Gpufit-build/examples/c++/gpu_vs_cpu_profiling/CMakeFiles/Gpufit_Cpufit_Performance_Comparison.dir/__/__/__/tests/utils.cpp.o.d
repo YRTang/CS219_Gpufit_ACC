@@ -1,7 +1,8 @@
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o: \
- /home/test/sarahTang/Gpufit/tests/utils.cpp /usr/include/stdc-predef.h \
- /home/test/sarahTang/Gpufit/tests/utils.h /usr/include/c++/13/vector \
- /usr/include/c++/13/bits/requires_hosted.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/tests/utils.cpp \
+ /usr/include/stdc-predef.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/tests/utils.h \
+ /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -139,10 +140,10 @@ examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Compariso
  /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h \
  /usr/include/c++/13/bits/random.tcc /usr/include/c++/13/numeric \
  /usr/include/c++/13/bits/stl_numeric.h \
- /home/test/sarahTang/Gpufit/Gpufit/gpufit.h /usr/include/c++/13/cstddef \
- /usr/include/c++/13/stdexcept /usr/include/c++/13/exception \
- /usr/include/c++/13/bits/exception_ptr.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/gpufit.h \
+ /usr/include/c++/13/cstddef /usr/include/c++/13/stdexcept \
+ /usr/include/c++/13/exception /usr/include/c++/13/bits/exception_ptr.h \
  /usr/include/c++/13/bits/cxxabi_init_exception.h \
  /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/nested_exception.h \
- /home/test/sarahTang/Gpufit/Gpufit/constants.h \
- /home/test/sarahTang/Gpufit/Gpufit/definitions.h
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/constants.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/definitions.h

@@ -6,7 +6,11 @@
 #include <iostream>
 #include <math.h>
 
-#define CSV_PATH "../Gpufit/examples/c++/myProject/sample_input.csv"
+#include <complex.h>
+#include <immintrin.h>
+#include <chrono>
+
+#define CSV_PATH "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/examples/c++/myProject/sample_input.csv"
 
 void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 {
@@ -38,11 +42,12 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 			// initial_parameters[i * n_model_parameters + p * 4 + 2] = creal(mp_profile->h[p]);
 			// initial_parameters[i * n_model_parameters + p * 4 + 3] = cimag(mp_profile->h[p]);
 
-			initial_parameters[i * n_model_parameters + p * 4 + 0] = 0.5; // 4: t, v, h_real, h_imag
-			initial_parameters[i * n_model_parameters + p * 4 + 1] = 0.5;
-			initial_parameters[i * n_model_parameters + p * 4 + 2] = 0.5;
-			initial_parameters[i * n_model_parameters + p * 4 + 3] = 0.5;
+			initial_parameters[i * n_model_parameters + p * 4 + 0] = 0.01; // 4: t, v, h_real, h_imag
+			initial_parameters[i * n_model_parameters + p * 4 + 1] = 0.01;
+			initial_parameters[i * n_model_parameters + p * 4 + 2] = 0.7;
+			initial_parameters[i * n_model_parameters + p * 4 + 3] = 0.01;
 		}
+		initial_parameters[i * n_model_parameters + 2] = 1;
 	}
 
 	// generate data
@@ -57,13 +62,13 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	}
 
 	// tolerance
-	REAL const tolerance = 0.001f;
+	REAL const tolerance = 1.0E-9;
 
 	// maximum number of iterations
-	int const max_number_iterations = 20;
+	int const max_number_iterations = 200;
 
 	// estimator ID
-	int const estimator_id = MLE;
+	int const estimator_id = LSE_COMPLEX;
 
 	// model ID
 	int const model_id = CHANNEL_EQ;
@@ -76,6 +81,7 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	std::vector<int> output_states(n_fits);
 	std::vector<REAL> output_chi_square(n_fits);
 	std::vector<int> output_number_iterations(n_fits);
+
 
 	// call to gpufit (C interface)
 	int const status = gpufit(
@@ -102,13 +108,36 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 		throw std::runtime_error(gpufit_get_last_error());
 	}
 
-	// examine output_parameters
-	//  Matrix[3x4]
+	// examine output_parameters --> Matrix[3x4]
 	cout << "size=" << output_parameters.size() << endl;
-	for (int i = 0; i < 12; i++)
-	{
-		cout << output_parameters.data()[i] << endl;
+	for (int j=0; j<3; j++){
+		for (int i = 0; i < 4; i++)
+		{
+			printf("%.5f ", output_parameters.data()[3*j+i]);
+		}
+		printf("\n");
 	}
+
+	cout << endl
+		 << "iteration number: " << endl;
+	for (int i : output_number_iterations)
+	{
+		cout << i << endl;
+	}
+
+	// get fit states
+	std::vector< int > output_states_histogram(5, 0);
+	for (std::vector< int >::iterator it = output_states.begin(); it != output_states.end(); ++it)
+	{
+		output_states_histogram[*it]++;
+	}
+
+	std::cout << "ratio converged              " << (REAL) output_states_histogram[0] / n_fits << "\n";
+	std::cout << "ratio max iteration exceeded " << (REAL) output_states_histogram[1] / n_fits << "\n";
+	std::cout << "ratio singular hessian       " << (REAL) output_states_histogram[2] / n_fits << "\n";
+	std::cout << "ratio neg curvature MLE      " << (REAL) output_states_histogram[3] / n_fits << "\n";
+	std::cout << "ratio gpu not read           " << (REAL) output_states_histogram[4] / n_fits << "\n";
+	std::cout << "chi-square		           " << (REAL) output_chi_square.data()[0] / n_fits << "\n";
 }
 
 int main(int argc, char *argv[])
@@ -120,11 +149,5 @@ int main(int argc, char *argv[])
 	mp_config_t mp_config = reader.getData();
 
 	mp_solver_example(&mp_profile, &mp_config);
-
-	std::cout << std::endl
-			  << "Example completed!" << std::endl;
-	std::cout << "Press ENTER to exit" << std::endl;
-	std::getchar();
-
 	return 0;
 }

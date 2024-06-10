@@ -1,4 +1,4 @@
-# Install script for directory: /home/test/sarahTang/Gpufit/Gpufit
+# Install script for directory: /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,10 +44,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/test/sarahTang/Gpufit-build/Gpufit/examples/cmake_install.cmake")
-  include("/home/test/sarahTang/Gpufit-build/Gpufit/matlab/cmake_install.cmake")
-  include("/home/test/sarahTang/Gpufit-build/Gpufit/python/cmake_install.cmake")
-  include("/home/test/sarahTang/Gpufit-build/Gpufit/java/cmake_install.cmake")
+  include("/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/examples/cmake_install.cmake")
+  include("/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/matlab/cmake_install.cmake")
+  include("/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/python/cmake_install.cmake")
+  include("/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/java/cmake_install.cmake")
 
 endif()
 

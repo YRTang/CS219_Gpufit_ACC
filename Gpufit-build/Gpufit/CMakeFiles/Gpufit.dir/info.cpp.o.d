@@ -1,7 +1,9 @@
 Gpufit/CMakeFiles/Gpufit.dir/info.cpp.o: \
- /home/test/sarahTang/Gpufit/Gpufit/info.cpp /usr/include/stdc-predef.h \
- /home/test/sarahTang/Gpufit/Gpufit/info.h \
- /home/test/sarahTang/Gpufit/Gpufit/gpufit.h /usr/include/c++/13/cstddef \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/info.cpp \
+ /usr/include/stdc-predef.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/info.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/gpufit.h \
+ /usr/include/c++/13/cstddef \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -124,8 +126,8 @@ Gpufit/CMakeFiles/Gpufit.dir/info.cpp.o: \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/functional_hash.h \
  /usr/include/c++/13/bits/basic_string.tcc \
- /home/test/sarahTang/Gpufit/Gpufit/constants.h \
- /home/test/sarahTang/Gpufit/Gpufit/definitions.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/constants.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/definitions.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \

@@ -1,4 +1,4 @@
-# Install script for directory: /home/test/sarahTang/Gpufit
+# Install script for directory: /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,9 +44,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/test/sarahTang/Gpufit-build/Cpufit/cmake_install.cmake")
-  include("/home/test/sarahTang/Gpufit-build/Gpufit/cmake_install.cmake")
-  include("/home/test/sarahTang/Gpufit-build/examples/c++/gpu_vs_cpu_profiling/cmake_install.cmake")
+  include("/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Cpufit/cmake_install.cmake")
+  include("/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/cmake_install.cmake")
+  include("/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/examples/c++/gpu_vs_cpu_profiling/cmake_install.cmake")
 
 endif()
 
@@ -58,5 +58,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/test/sarahTang/Gpufit-build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

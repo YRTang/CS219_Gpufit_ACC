@@ -58,18 +58,18 @@ endif()
 
 # Set these up as variables to make reading the generated file easier
 set(CMAKE_COMMAND "/usr/bin/cmake") # path
-set(source_file "/home/test/sarahTang/Gpufit/Gpufit/lm_fit_cuda.cu") # path
-set(NVCC_generated_dependency_file "/home/test/sarahTang/Gpufit-build/Gpufit/CMakeFiles/Gpufit.dir//Gpufit_generated_lm_fit_cuda.cu.o.NVCC-depend") # path
-set(cmake_dependency_file "/home/test/sarahTang/Gpufit-build/Gpufit/CMakeFiles/Gpufit.dir//Gpufit_generated_lm_fit_cuda.cu.o.depend") # path
+set(source_file "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/lm_fit_cuda.cu") # path
+set(NVCC_generated_dependency_file "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/CMakeFiles/Gpufit.dir//Gpufit_generated_lm_fit_cuda.cu.o.NVCC-depend") # path
+set(cmake_dependency_file "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/CMakeFiles/Gpufit.dir//Gpufit_generated_lm_fit_cuda.cu.o.depend") # path
 set(CUDA_make2cmake "/usr/share/cmake-3.28/Modules/FindCUDA/make2cmake.cmake") # path
 set(CUDA_parse_cubin "/usr/share/cmake-3.28/Modules/FindCUDA/parse_cubin.cmake") # path
 set(build_cubin OFF) # bool
 set(CUDA_HOST_COMPILER "/usr/bin/gcc-12") # path
 # We won't actually use these variables for now, but we need to set this, in
 # order to force this file to be run again if it changes.
-set(generated_file_path "/home/test/sarahTang/Gpufit-build/Gpufit/CMakeFiles/Gpufit.dir//.") # path
-set(generated_file_internal "/home/test/sarahTang/Gpufit-build/Gpufit/CMakeFiles/Gpufit.dir//./Gpufit_generated_lm_fit_cuda.cu.o") # path
-set(generated_cubin_file_internal "/home/test/sarahTang/Gpufit-build/Gpufit/CMakeFiles/Gpufit.dir//./Gpufit_generated_lm_fit_cuda.cu.o.cubin.txt") # path
+set(generated_file_path "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/CMakeFiles/Gpufit.dir//.") # path
+set(generated_file_internal "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/CMakeFiles/Gpufit.dir//./Gpufit_generated_lm_fit_cuda.cu.o") # path
+set(generated_cubin_file_internal "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/CMakeFiles/Gpufit.dir//./Gpufit_generated_lm_fit_cuda.cu.o.cubin.txt") # path
 
 set(CUDA_NVCC_EXECUTABLE "/usr/bin/nvcc") # path
 set(CUDA_NVCC_FLAGS -gencode;arch=compute_53,code=sm_53;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_72,code=sm_72;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_86,code=compute_86;--std=c++11 ;; ) # list

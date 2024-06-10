@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/test/sarahTang/Gpufit/Cpufit/cpufit.cpp" "Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.o" "gcc" "Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.o.d"
-  "/home/test/sarahTang/Gpufit/Cpufit/info.cpp" "Cpufit/CMakeFiles/Cpufit.dir/info.cpp.o" "gcc" "Cpufit/CMakeFiles/Cpufit.dir/info.cpp.o.d"
-  "/home/test/sarahTang/Gpufit/Cpufit/interface.cpp" "Cpufit/CMakeFiles/Cpufit.dir/interface.cpp.o" "gcc" "Cpufit/CMakeFiles/Cpufit.dir/interface.cpp.o.d"
-  "/home/test/sarahTang/Gpufit/Cpufit/lm_fit.cpp" "Cpufit/CMakeFiles/Cpufit.dir/lm_fit.cpp.o" "gcc" "Cpufit/CMakeFiles/Cpufit.dir/lm_fit.cpp.o.d"
-  "/home/test/sarahTang/Gpufit/Cpufit/lm_fit_cpp.cpp" "Cpufit/CMakeFiles/Cpufit.dir/lm_fit_cpp.cpp.o" "gcc" "Cpufit/CMakeFiles/Cpufit.dir/lm_fit_cpp.cpp.o.d"
+  "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/cpufit.cpp" "Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.o" "gcc" "Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.o.d"
+  "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/info.cpp" "Cpufit/CMakeFiles/Cpufit.dir/info.cpp.o" "gcc" "Cpufit/CMakeFiles/Cpufit.dir/info.cpp.o.d"
+  "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/interface.cpp" "Cpufit/CMakeFiles/Cpufit.dir/interface.cpp.o" "gcc" "Cpufit/CMakeFiles/Cpufit.dir/interface.cpp.o.d"
+  "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/lm_fit.cpp" "Cpufit/CMakeFiles/Cpufit.dir/lm_fit.cpp.o" "gcc" "Cpufit/CMakeFiles/Cpufit.dir/lm_fit.cpp.o.d"
+  "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/lm_fit_cpp.cpp" "Cpufit/CMakeFiles/Cpufit.dir/lm_fit_cpp.cpp.o" "gcc" "Cpufit/CMakeFiles/Cpufit.dir/lm_fit_cpp.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

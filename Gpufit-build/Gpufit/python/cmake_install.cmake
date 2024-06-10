@@ -1,4 +1,4 @@
-# Install script for directory: /home/test/sarahTang/Gpufit/Gpufit/python
+# Install script for directory: /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/python
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

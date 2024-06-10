@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test/sarahTang/Gpufit
+CMAKE_SOURCE_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test/sarahTang/Gpufit-build
+CMAKE_BINARY_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build
 
 # Utility rule file for DOCUMENTATION_PDFLATEX.
 
@@ -67,9 +67,9 @@ include CMakeFiles/DOCUMENTATION_PDFLATEX.dir/compiler_depend.make
 include CMakeFiles/DOCUMENTATION_PDFLATEX.dir/progress.make
 
 CMakeFiles/DOCUMENTATION_PDFLATEX:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Converting documentation to PDF"
-	/usr/bin/cmake -E chdir /home/test/sarahTang/Gpufit/docs/_build/latex /usr/bin/pdflatex -interaction=nonstopmode Gpufit.tex
-	/usr/bin/cmake -E chdir /home/test/sarahTang/Gpufit/docs/_build/latex /usr/bin/pdflatex -interaction=nonstopmode Gpufit.tex
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Converting documentation to PDF"
+	/usr/bin/cmake -E chdir /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/docs/_build/latex /usr/bin/pdflatex -interaction=nonstopmode Gpufit.tex
+	/usr/bin/cmake -E chdir /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/docs/_build/latex /usr/bin/pdflatex -interaction=nonstopmode Gpufit.tex
 
 DOCUMENTATION_PDFLATEX: CMakeFiles/DOCUMENTATION_PDFLATEX
 DOCUMENTATION_PDFLATEX: CMakeFiles/DOCUMENTATION_PDFLATEX.dir/build.make
@@ -84,6 +84,6 @@ CMakeFiles/DOCUMENTATION_PDFLATEX.dir/clean:
 .PHONY : CMakeFiles/DOCUMENTATION_PDFLATEX.dir/clean
 
 CMakeFiles/DOCUMENTATION_PDFLATEX.dir/depend:
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test/sarahTang/Gpufit /home/test/sarahTang/Gpufit /home/test/sarahTang/Gpufit-build /home/test/sarahTang/Gpufit-build /home/test/sarahTang/Gpufit-build/CMakeFiles/DOCUMENTATION_PDFLATEX.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles/DOCUMENTATION_PDFLATEX.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/DOCUMENTATION_PDFLATEX.dir/depend
 

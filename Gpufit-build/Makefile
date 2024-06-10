@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test/sarahTang/Gpufit
+CMAKE_SOURCE_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test/sarahTang/Gpufit-build
+CMAKE_BINARY_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,9 +97,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles /home/test/sarahTang/Gpufit-build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -582,17 +582,17 @@ Gpufit/fast:
 .PHONY : Gpufit/fast
 
 #=============================================================================
-# Target rules for targets named mp_solver
+# Target rules for targets named mp_solver_example
 
 # Build rule for target.
-mp_solver: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mp_solver
-.PHONY : mp_solver
+mp_solver_example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mp_solver_example
+.PHONY : mp_solver_example
 
 # fast build rule for target.
-mp_solver/fast:
-	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver.dir/build.make Gpufit/examples/CMakeFiles/mp_solver.dir/build
-.PHONY : mp_solver/fast
+mp_solver_example/fast:
+	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/build
+.PHONY : mp_solver_example/fast
 
 #=============================================================================
 # Target rules for targets named PYTHON_PACKAGE
@@ -694,7 +694,7 @@ help:
 	@echo "... Gpufit"
 	@echo "... Gpufit_Cpufit_Nvidia_Profiler_Test"
 	@echo "... Gpufit_Cpufit_Performance_Comparison"
-	@echo "... mp_solver"
+	@echo "... mp_solver_example"
 .PHONY : help
 
 

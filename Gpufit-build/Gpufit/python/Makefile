@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test/sarahTang/Gpufit
+CMAKE_SOURCE_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test/sarahTang/Gpufit-build
+CMAKE_BINARY_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles /home/test/sarahTang/Gpufit-build/Gpufit/python//CMakeFiles/progress.marks
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/python//CMakeFiles/progress.marks
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/clean
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,22 +113,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/preinstall
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/preinstall
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/rule:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/rule
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/rule
 .PHONY : Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/rule
 
 # Convenience name for target.
@@ -137,12 +137,12 @@ PYTHON_PACKAGE: Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/rule
 
 # fast build rule for target.
 PYTHON_PACKAGE/fast:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/build.make Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/build
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/build.make Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/build
 .PHONY : PYTHON_PACKAGE/fast
 
 # Convenience name for target.
 Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/rule:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/rule
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/rule
 .PHONY : Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/rule
 
 # Convenience name for target.
@@ -151,7 +151,7 @@ PYTHON_WHEEL: Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/rule
 
 # fast build rule for target.
 PYTHON_WHEEL/fast:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/build.make Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/build
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/build.make Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/build
 .PHONY : PYTHON_WHEEL/fast
 
 # Help Target
@@ -176,6 +176,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

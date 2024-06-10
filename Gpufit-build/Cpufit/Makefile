@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test/sarahTang/Gpufit
+CMAKE_SOURCE_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test/sarahTang/Gpufit-build
+CMAKE_BINARY_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles /home/test/sarahTang/Gpufit-build/Cpufit//CMakeFiles/progress.marks
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Cpufit//CMakeFiles/progress.marks
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/clean
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,22 +113,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/preinstall
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/preinstall
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Cpufit/CMakeFiles/Cpufit.dir/rule:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/CMakeFiles/Cpufit.dir/rule
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/CMakeFiles/Cpufit.dir/rule
 .PHONY : Cpufit/CMakeFiles/Cpufit.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ Cpufit: Cpufit/CMakeFiles/Cpufit.dir/rule
 
 # fast build rule for target.
 Cpufit/fast:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/build
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/build
 .PHONY : Cpufit/fast
 
 cpufit.o: cpufit.cpp.o
@@ -145,7 +145,7 @@ cpufit.o: cpufit.cpp.o
 
 # target to build an object file
 cpufit.cpp.o:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.o
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.o
 .PHONY : cpufit.cpp.o
 
 cpufit.i: cpufit.cpp.i
@@ -153,7 +153,7 @@ cpufit.i: cpufit.cpp.i
 
 # target to preprocess a source file
 cpufit.cpp.i:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.i
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.i
 .PHONY : cpufit.cpp.i
 
 cpufit.s: cpufit.cpp.s
@@ -161,7 +161,7 @@ cpufit.s: cpufit.cpp.s
 
 # target to generate assembly for a file
 cpufit.cpp.s:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.s
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.s
 .PHONY : cpufit.cpp.s
 
 info.o: info.cpp.o
@@ -169,7 +169,7 @@ info.o: info.cpp.o
 
 # target to build an object file
 info.cpp.o:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/info.cpp.o
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/info.cpp.o
 .PHONY : info.cpp.o
 
 info.i: info.cpp.i
@@ -177,7 +177,7 @@ info.i: info.cpp.i
 
 # target to preprocess a source file
 info.cpp.i:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/info.cpp.i
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/info.cpp.i
 .PHONY : info.cpp.i
 
 info.s: info.cpp.s
@@ -185,7 +185,7 @@ info.s: info.cpp.s
 
 # target to generate assembly for a file
 info.cpp.s:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/info.cpp.s
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/info.cpp.s
 .PHONY : info.cpp.s
 
 interface.o: interface.cpp.o
@@ -193,7 +193,7 @@ interface.o: interface.cpp.o
 
 # target to build an object file
 interface.cpp.o:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/interface.cpp.o
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/interface.cpp.o
 .PHONY : interface.cpp.o
 
 interface.i: interface.cpp.i
@@ -201,7 +201,7 @@ interface.i: interface.cpp.i
 
 # target to preprocess a source file
 interface.cpp.i:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/interface.cpp.i
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/interface.cpp.i
 .PHONY : interface.cpp.i
 
 interface.s: interface.cpp.s
@@ -209,7 +209,7 @@ interface.s: interface.cpp.s
 
 # target to generate assembly for a file
 interface.cpp.s:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/interface.cpp.s
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/interface.cpp.s
 .PHONY : interface.cpp.s
 
 lm_fit.o: lm_fit.cpp.o
@@ -217,7 +217,7 @@ lm_fit.o: lm_fit.cpp.o
 
 # target to build an object file
 lm_fit.cpp.o:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/lm_fit.cpp.o
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/lm_fit.cpp.o
 .PHONY : lm_fit.cpp.o
 
 lm_fit.i: lm_fit.cpp.i
@@ -225,7 +225,7 @@ lm_fit.i: lm_fit.cpp.i
 
 # target to preprocess a source file
 lm_fit.cpp.i:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/lm_fit.cpp.i
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/lm_fit.cpp.i
 .PHONY : lm_fit.cpp.i
 
 lm_fit.s: lm_fit.cpp.s
@@ -233,7 +233,7 @@ lm_fit.s: lm_fit.cpp.s
 
 # target to generate assembly for a file
 lm_fit.cpp.s:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/lm_fit.cpp.s
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/lm_fit.cpp.s
 .PHONY : lm_fit.cpp.s
 
 lm_fit_cpp.o: lm_fit_cpp.cpp.o
@@ -241,7 +241,7 @@ lm_fit_cpp.o: lm_fit_cpp.cpp.o
 
 # target to build an object file
 lm_fit_cpp.cpp.o:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/lm_fit_cpp.cpp.o
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/lm_fit_cpp.cpp.o
 .PHONY : lm_fit_cpp.cpp.o
 
 lm_fit_cpp.i: lm_fit_cpp.cpp.i
@@ -249,7 +249,7 @@ lm_fit_cpp.i: lm_fit_cpp.cpp.i
 
 # target to preprocess a source file
 lm_fit_cpp.cpp.i:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/lm_fit_cpp.cpp.i
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/lm_fit_cpp.cpp.i
 .PHONY : lm_fit_cpp.cpp.i
 
 lm_fit_cpp.s: lm_fit_cpp.cpp.s
@@ -257,7 +257,7 @@ lm_fit_cpp.s: lm_fit_cpp.cpp.s
 
 # target to generate assembly for a file
 lm_fit_cpp.cpp.s:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/lm_fit_cpp.cpp.s
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/lm_fit_cpp.cpp.s
 .PHONY : lm_fit_cpp.cpp.s
 
 # Help Target
@@ -296,6 +296,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test/sarahTang/Gpufit
+CMAKE_SOURCE_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test/sarahTang/Gpufit-build
+CMAKE_BINARY_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build
 
 # Include any dependencies generated for this target.
 include examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/depend.make
@@ -70,32 +70,32 @@ include examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_C
 include examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/flags.make
 
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o: examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/flags.make
-examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o: /home/test/sarahTang/Gpufit/examples/c++/gpu_vs_cpu_profiling/Gpufit_Cpufit_Performance_Comparison.cpp
+examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o: /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/examples/c++/gpu_vs_cpu_profiling/Gpufit_Cpufit_Performance_Comparison.cpp
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o: examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o"
-	cd /home/test/sarahTang/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o -MF CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o.d -o CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o -c /home/test/sarahTang/Gpufit/examples/c++/gpu_vs_cpu_profiling/Gpufit_Cpufit_Performance_Comparison.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o"
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o -MF CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o.d -o CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o -c /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/examples/c++/gpu_vs_cpu_profiling/Gpufit_Cpufit_Performance_Comparison.cpp
 
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.i"
-	cd /home/test/sarahTang/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/test/sarahTang/Gpufit/examples/c++/gpu_vs_cpu_profiling/Gpufit_Cpufit_Performance_Comparison.cpp > CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.i
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/examples/c++/gpu_vs_cpu_profiling/Gpufit_Cpufit_Performance_Comparison.cpp > CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.i
 
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.s"
-	cd /home/test/sarahTang/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/test/sarahTang/Gpufit/examples/c++/gpu_vs_cpu_profiling/Gpufit_Cpufit_Performance_Comparison.cpp -o CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.s
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/examples/c++/gpu_vs_cpu_profiling/Gpufit_Cpufit_Performance_Comparison.cpp -o CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.s
 
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o: examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/flags.make
-examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o: /home/test/sarahTang/Gpufit/tests/utils.cpp
+examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o: /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/tests/utils.cpp
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o: examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o"
-	cd /home/test/sarahTang/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o -MF CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o.d -o CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o -c /home/test/sarahTang/Gpufit/tests/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o"
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o -MF CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o.d -o CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o -c /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/tests/utils.cpp
 
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.i"
-	cd /home/test/sarahTang/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/test/sarahTang/Gpufit/tests/utils.cpp > CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.i
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/tests/utils.cpp > CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.i
 
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.s"
-	cd /home/test/sarahTang/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/test/sarahTang/Gpufit/tests/utils.cpp -o CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.s
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/tests/utils.cpp -o CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.s
 
 # Object files for target Gpufit_Cpufit_Performance_Comparison
 Gpufit_Cpufit_Performance_Comparison_OBJECTS = \
@@ -113,18 +113,18 @@ Gpufit_Cpufit_Performance_Comparison: Gpufit/libGpufit.so
 Gpufit_Cpufit_Performance_Comparison: /usr/lib/x86_64-linux-gnu/libcudart_static.a
 Gpufit_Cpufit_Performance_Comparison: /usr/lib/x86_64-linux-gnu/librt.a
 Gpufit_Cpufit_Performance_Comparison: examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../../Gpufit_Cpufit_Performance_Comparison"
-	cd /home/test/sarahTang/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../../Gpufit_Cpufit_Performance_Comparison"
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build: Gpufit_Cpufit_Performance_Comparison
 .PHONY : examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build
 
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/clean:
-	cd /home/test/sarahTang/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && $(CMAKE_COMMAND) -P CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/cmake_clean.cmake
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/examples/c++/gpu_vs_cpu_profiling && $(CMAKE_COMMAND) -P CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/cmake_clean.cmake
 .PHONY : examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/clean
 
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/depend:
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test/sarahTang/Gpufit /home/test/sarahTang/Gpufit/examples/c++/gpu_vs_cpu_profiling /home/test/sarahTang/Gpufit-build /home/test/sarahTang/Gpufit-build/examples/c++/gpu_vs_cpu_profiling /home/test/sarahTang/Gpufit-build/examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/examples/c++/gpu_vs_cpu_profiling /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/examples/c++/gpu_vs_cpu_profiling /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/depend
 

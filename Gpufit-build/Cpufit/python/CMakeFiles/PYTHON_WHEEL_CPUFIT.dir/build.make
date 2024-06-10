@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test/sarahTang/Gpufit
+CMAKE_SOURCE_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test/sarahTang/Gpufit-build
+CMAKE_BINARY_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build
 
 # Utility rule file for PYTHON_WHEEL_CPUFIT.
 
@@ -67,9 +67,9 @@ include Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/compiler_depend.make
 include Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/progress.make
 
 Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Preparing Python Wheel"
-	cd /home/test/sarahTang/Gpufit-build/Cpufit/python && /usr/bin/cmake -E chdir /home/test/sarahTang/Gpufit-build/./pyCpufit /usr/bin/python3 setup.py clean --all
-	cd /home/test/sarahTang/Gpufit-build/Cpufit/python && /usr/bin/cmake -E chdir /home/test/sarahTang/Gpufit-build/./pyCpufit /usr/bin/python3 setup.py bdist_wheel
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Preparing Python Wheel"
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Cpufit/python && /usr/bin/cmake -E chdir /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/./pyCpufit /usr/bin/python3 setup.py clean --all
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Cpufit/python && /usr/bin/cmake -E chdir /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/./pyCpufit /usr/bin/python3 setup.py bdist_wheel
 
 PYTHON_WHEEL_CPUFIT: Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT
 PYTHON_WHEEL_CPUFIT: Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/build.make
@@ -80,10 +80,10 @@ Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/build: PYTHON_WHEEL_CPUFIT
 .PHONY : Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/build
 
 Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/clean:
-	cd /home/test/sarahTang/Gpufit-build/Cpufit/python && $(CMAKE_COMMAND) -P CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/cmake_clean.cmake
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Cpufit/python && $(CMAKE_COMMAND) -P CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/cmake_clean.cmake
 .PHONY : Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/clean
 
 Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/depend:
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test/sarahTang/Gpufit /home/test/sarahTang/Gpufit/Cpufit/python /home/test/sarahTang/Gpufit-build /home/test/sarahTang/Gpufit-build/Cpufit/python /home/test/sarahTang/Gpufit-build/Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/python /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Cpufit/python /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/depend
 

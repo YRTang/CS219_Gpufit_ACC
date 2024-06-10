@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test/sarahTang/Gpufit
+CMAKE_SOURCE_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test/sarahTang/Gpufit-build
+CMAKE_BINARY_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -192,7 +192,7 @@ Gpufit/clean: Gpufit/java/clean
 # Directory level rules for directory Gpufit/examples
 
 # Recursive "all" directory target.
-Gpufit/examples/all: Gpufit/examples/CMakeFiles/mp_solver.dir/all
+Gpufit/examples/all: Gpufit/examples/CMakeFiles/mp_solver_example.dir/all
 .PHONY : Gpufit/examples/all
 
 # Recursive "preinstall" directory target.
@@ -200,7 +200,7 @@ Gpufit/examples/preinstall:
 .PHONY : Gpufit/examples/preinstall
 
 # Recursive "clean" directory target.
-Gpufit/examples/clean: Gpufit/examples/CMakeFiles/mp_solver.dir/clean
+Gpufit/examples/clean: Gpufit/examples/CMakeFiles/mp_solver_example.dir/clean
 .PHONY : Gpufit/examples/clean
 
 #=============================================================================
@@ -273,14 +273,14 @@ examples/c++/gpu_vs_cpu_profiling/clean: examples/c++/gpu_vs_cpu_profiling/CMake
 CMakeFiles/Experimental.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Experimental.dir/build.make CMakeFiles/Experimental.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target Experimental"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target Experimental"
 .PHONY : CMakeFiles/Experimental.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Experimental.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Experimental.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/Experimental.dir/rule
 
 # Convenience name for target.
@@ -299,14 +299,14 @@ CMakeFiles/Experimental.dir/clean:
 CMakeFiles/Nightly.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Nightly.dir/build.make CMakeFiles/Nightly.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Nightly.dir/build.make CMakeFiles/Nightly.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target Nightly"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target Nightly"
 .PHONY : CMakeFiles/Nightly.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Nightly.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Nightly.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/Nightly.dir/rule
 
 # Convenience name for target.
@@ -325,14 +325,14 @@ CMakeFiles/Nightly.dir/clean:
 CMakeFiles/Continuous.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Continuous.dir/build.make CMakeFiles/Continuous.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Continuous.dir/build.make CMakeFiles/Continuous.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target Continuous"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target Continuous"
 .PHONY : CMakeFiles/Continuous.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Continuous.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Continuous.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/Continuous.dir/rule
 
 # Convenience name for target.
@@ -351,14 +351,14 @@ CMakeFiles/Continuous.dir/clean:
 CMakeFiles/NightlyMemoryCheck.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyMemoryCheck"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyMemoryCheck"
 .PHONY : CMakeFiles/NightlyMemoryCheck.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyMemoryCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NightlyMemoryCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyMemoryCheck.dir/rule
 
 # Convenience name for target.
@@ -377,14 +377,14 @@ CMakeFiles/NightlyMemoryCheck.dir/clean:
 CMakeFiles/NightlyStart.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyStart.dir/build.make CMakeFiles/NightlyStart.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyStart.dir/build.make CMakeFiles/NightlyStart.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyStart"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyStart"
 .PHONY : CMakeFiles/NightlyStart.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyStart.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NightlyStart.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyStart.dir/rule
 
 # Convenience name for target.
@@ -403,14 +403,14 @@ CMakeFiles/NightlyStart.dir/clean:
 CMakeFiles/NightlyUpdate.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyUpdate.dir/build.make CMakeFiles/NightlyUpdate.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyUpdate.dir/build.make CMakeFiles/NightlyUpdate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyUpdate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyUpdate"
 .PHONY : CMakeFiles/NightlyUpdate.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyUpdate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NightlyUpdate.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyUpdate.dir/rule
 
 # Convenience name for target.
@@ -429,14 +429,14 @@ CMakeFiles/NightlyUpdate.dir/clean:
 CMakeFiles/NightlyConfigure.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyConfigure.dir/build.make CMakeFiles/NightlyConfigure.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyConfigure.dir/build.make CMakeFiles/NightlyConfigure.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyConfigure"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyConfigure"
 .PHONY : CMakeFiles/NightlyConfigure.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyConfigure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NightlyConfigure.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyConfigure.dir/rule
 
 # Convenience name for target.
@@ -455,14 +455,14 @@ CMakeFiles/NightlyConfigure.dir/clean:
 CMakeFiles/NightlyBuild.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyBuild"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyBuild"
 .PHONY : CMakeFiles/NightlyBuild.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyBuild.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NightlyBuild.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyBuild.dir/rule
 
 # Convenience name for target.
@@ -481,14 +481,14 @@ CMakeFiles/NightlyBuild.dir/clean:
 CMakeFiles/NightlyTest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyTest.dir/build.make CMakeFiles/NightlyTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyTest.dir/build.make CMakeFiles/NightlyTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyTest"
 .PHONY : CMakeFiles/NightlyTest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NightlyTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyTest.dir/rule
 
 # Convenience name for target.
@@ -507,14 +507,14 @@ CMakeFiles/NightlyTest.dir/clean:
 CMakeFiles/NightlyCoverage.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyCoverage.dir/build.make CMakeFiles/NightlyCoverage.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyCoverage.dir/build.make CMakeFiles/NightlyCoverage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyCoverage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyCoverage"
 .PHONY : CMakeFiles/NightlyCoverage.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyCoverage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NightlyCoverage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyCoverage.dir/rule
 
 # Convenience name for target.
@@ -533,14 +533,14 @@ CMakeFiles/NightlyCoverage.dir/clean:
 CMakeFiles/NightlyMemCheck.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyMemCheck.dir/build.make CMakeFiles/NightlyMemCheck.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlyMemCheck.dir/build.make CMakeFiles/NightlyMemCheck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyMemCheck"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target NightlyMemCheck"
 .PHONY : CMakeFiles/NightlyMemCheck.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlyMemCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NightlyMemCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/NightlyMemCheck.dir/rule
 
 # Convenience name for target.
@@ -559,14 +559,14 @@ CMakeFiles/NightlyMemCheck.dir/clean:
 CMakeFiles/NightlySubmit.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlySubmit.dir/build.make CMakeFiles/NightlySubmit.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NightlySubmit.dir/build.make CMakeFiles/NightlySubmit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target NightlySubmit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target NightlySubmit"
 .PHONY : CMakeFiles/NightlySubmit.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/NightlySubmit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NightlySubmit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/NightlySubmit.dir/rule
 
 # Convenience name for target.
@@ -585,14 +585,14 @@ CMakeFiles/NightlySubmit.dir/clean:
 CMakeFiles/ExperimentalStart.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalStart.dir/build.make CMakeFiles/ExperimentalStart.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalStart.dir/build.make CMakeFiles/ExperimentalStart.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalStart"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalStart"
 .PHONY : CMakeFiles/ExperimentalStart.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalStart.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalStart.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalStart.dir/rule
 
 # Convenience name for target.
@@ -611,14 +611,14 @@ CMakeFiles/ExperimentalStart.dir/clean:
 CMakeFiles/ExperimentalUpdate.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalUpdate.dir/build.make CMakeFiles/ExperimentalUpdate.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalUpdate.dir/build.make CMakeFiles/ExperimentalUpdate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalUpdate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalUpdate"
 .PHONY : CMakeFiles/ExperimentalUpdate.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalUpdate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalUpdate.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalUpdate.dir/rule
 
 # Convenience name for target.
@@ -637,14 +637,14 @@ CMakeFiles/ExperimentalUpdate.dir/clean:
 CMakeFiles/ExperimentalConfigure.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalConfigure.dir/build.make CMakeFiles/ExperimentalConfigure.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalConfigure.dir/build.make CMakeFiles/ExperimentalConfigure.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalConfigure"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalConfigure"
 .PHONY : CMakeFiles/ExperimentalConfigure.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalConfigure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalConfigure.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalConfigure.dir/rule
 
 # Convenience name for target.
@@ -663,14 +663,14 @@ CMakeFiles/ExperimentalConfigure.dir/clean:
 CMakeFiles/ExperimentalBuild.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalBuild"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalBuild"
 .PHONY : CMakeFiles/ExperimentalBuild.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalBuild.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalBuild.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalBuild.dir/rule
 
 # Convenience name for target.
@@ -689,14 +689,14 @@ CMakeFiles/ExperimentalBuild.dir/clean:
 CMakeFiles/ExperimentalTest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalTest"
 .PHONY : CMakeFiles/ExperimentalTest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalTest.dir/rule
 
 # Convenience name for target.
@@ -715,14 +715,14 @@ CMakeFiles/ExperimentalTest.dir/clean:
 CMakeFiles/ExperimentalCoverage.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalCoverage.dir/build.make CMakeFiles/ExperimentalCoverage.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalCoverage.dir/build.make CMakeFiles/ExperimentalCoverage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalCoverage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalCoverage"
 .PHONY : CMakeFiles/ExperimentalCoverage.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalCoverage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalCoverage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalCoverage.dir/rule
 
 # Convenience name for target.
@@ -741,14 +741,14 @@ CMakeFiles/ExperimentalCoverage.dir/clean:
 CMakeFiles/ExperimentalMemCheck.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalMemCheck.dir/build.make CMakeFiles/ExperimentalMemCheck.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalMemCheck.dir/build.make CMakeFiles/ExperimentalMemCheck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalMemCheck"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalMemCheck"
 .PHONY : CMakeFiles/ExperimentalMemCheck.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalMemCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalMemCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalMemCheck.dir/rule
 
 # Convenience name for target.
@@ -767,14 +767,14 @@ CMakeFiles/ExperimentalMemCheck.dir/clean:
 CMakeFiles/ExperimentalSubmit.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalSubmit.dir/build.make CMakeFiles/ExperimentalSubmit.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExperimentalSubmit.dir/build.make CMakeFiles/ExperimentalSubmit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalSubmit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ExperimentalSubmit"
 .PHONY : CMakeFiles/ExperimentalSubmit.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ExperimentalSubmit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalSubmit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ExperimentalSubmit.dir/rule
 
 # Convenience name for target.
@@ -793,14 +793,14 @@ CMakeFiles/ExperimentalSubmit.dir/clean:
 CMakeFiles/ContinuousStart.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousStart.dir/build.make CMakeFiles/ContinuousStart.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousStart.dir/build.make CMakeFiles/ContinuousStart.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousStart"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousStart"
 .PHONY : CMakeFiles/ContinuousStart.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousStart.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousStart.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousStart.dir/rule
 
 # Convenience name for target.
@@ -819,14 +819,14 @@ CMakeFiles/ContinuousStart.dir/clean:
 CMakeFiles/ContinuousUpdate.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousUpdate.dir/build.make CMakeFiles/ContinuousUpdate.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousUpdate.dir/build.make CMakeFiles/ContinuousUpdate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousUpdate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousUpdate"
 .PHONY : CMakeFiles/ContinuousUpdate.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousUpdate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousUpdate.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousUpdate.dir/rule
 
 # Convenience name for target.
@@ -845,14 +845,14 @@ CMakeFiles/ContinuousUpdate.dir/clean:
 CMakeFiles/ContinuousConfigure.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousConfigure.dir/build.make CMakeFiles/ContinuousConfigure.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousConfigure.dir/build.make CMakeFiles/ContinuousConfigure.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousConfigure"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousConfigure"
 .PHONY : CMakeFiles/ContinuousConfigure.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousConfigure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousConfigure.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousConfigure.dir/rule
 
 # Convenience name for target.
@@ -871,14 +871,14 @@ CMakeFiles/ContinuousConfigure.dir/clean:
 CMakeFiles/ContinuousBuild.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousBuild.dir/build.make CMakeFiles/ContinuousBuild.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousBuild.dir/build.make CMakeFiles/ContinuousBuild.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousBuild"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousBuild"
 .PHONY : CMakeFiles/ContinuousBuild.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousBuild.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousBuild.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousBuild.dir/rule
 
 # Convenience name for target.
@@ -897,14 +897,14 @@ CMakeFiles/ContinuousBuild.dir/clean:
 CMakeFiles/ContinuousTest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousTest.dir/build.make CMakeFiles/ContinuousTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousTest.dir/build.make CMakeFiles/ContinuousTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousTest"
 .PHONY : CMakeFiles/ContinuousTest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousTest.dir/rule
 
 # Convenience name for target.
@@ -923,14 +923,14 @@ CMakeFiles/ContinuousTest.dir/clean:
 CMakeFiles/ContinuousCoverage.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousCoverage.dir/build.make CMakeFiles/ContinuousCoverage.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousCoverage.dir/build.make CMakeFiles/ContinuousCoverage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousCoverage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousCoverage"
 .PHONY : CMakeFiles/ContinuousCoverage.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousCoverage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousCoverage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousCoverage.dir/rule
 
 # Convenience name for target.
@@ -949,14 +949,14 @@ CMakeFiles/ContinuousCoverage.dir/clean:
 CMakeFiles/ContinuousMemCheck.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousMemCheck.dir/build.make CMakeFiles/ContinuousMemCheck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousMemCheck"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousMemCheck"
 .PHONY : CMakeFiles/ContinuousMemCheck.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousMemCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousMemCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousMemCheck.dir/rule
 
 # Convenience name for target.
@@ -975,14 +975,14 @@ CMakeFiles/ContinuousMemCheck.dir/clean:
 CMakeFiles/ContinuousSubmit.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousSubmit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target ContinuousSubmit"
 .PHONY : CMakeFiles/ContinuousSubmit.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ContinuousSubmit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ContinuousSubmit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/ContinuousSubmit.dir/rule
 
 # Convenience name for target.
@@ -1001,14 +1001,14 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 CMakeFiles/DOCUMENTATION_PDFLATEX.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DOCUMENTATION_PDFLATEX.dir/build.make CMakeFiles/DOCUMENTATION_PDFLATEX.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DOCUMENTATION_PDFLATEX.dir/build.make CMakeFiles/DOCUMENTATION_PDFLATEX.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=7 "Built target DOCUMENTATION_PDFLATEX"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=7 "Built target DOCUMENTATION_PDFLATEX"
 .PHONY : CMakeFiles/DOCUMENTATION_PDFLATEX.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DOCUMENTATION_PDFLATEX.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/DOCUMENTATION_PDFLATEX.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/DOCUMENTATION_PDFLATEX.dir/rule
 
 # Convenience name for target.
@@ -1027,14 +1027,14 @@ CMakeFiles/DOCUMENTATION_PDFLATEX.dir/clean:
 CMakeFiles/RUN_PYTHON.dir/all: Gpufit/CMakeFiles/Gpufit.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RUN_PYTHON.dir/build.make CMakeFiles/RUN_PYTHON.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RUN_PYTHON.dir/build.make CMakeFiles/RUN_PYTHON.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target RUN_PYTHON"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target RUN_PYTHON"
 .PHONY : CMakeFiles/RUN_PYTHON.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/RUN_PYTHON.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/RUN_PYTHON.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/RUN_PYTHON.dir/rule
 
 # Convenience name for target.
@@ -1053,14 +1053,14 @@ CMakeFiles/RUN_PYTHON.dir/clean:
 CMakeFiles/RUN_PYTHON_CPUFIT.dir/all: Cpufit/CMakeFiles/Cpufit.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RUN_PYTHON_CPUFIT.dir/build.make CMakeFiles/RUN_PYTHON_CPUFIT.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RUN_PYTHON_CPUFIT.dir/build.make CMakeFiles/RUN_PYTHON_CPUFIT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target RUN_PYTHON_CPUFIT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target RUN_PYTHON_CPUFIT"
 .PHONY : CMakeFiles/RUN_PYTHON_CPUFIT.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/RUN_PYTHON_CPUFIT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/RUN_PYTHON_CPUFIT.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : CMakeFiles/RUN_PYTHON_CPUFIT.dir/rule
 
 # Convenience name for target.
@@ -1079,14 +1079,14 @@ CMakeFiles/RUN_PYTHON_CPUFIT.dir/clean:
 Cpufit/CMakeFiles/Cpufit.dir/all:
 	$(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/depend
 	$(MAKE) $(MAKESILENT) -f Cpufit/CMakeFiles/Cpufit.dir/build.make Cpufit/CMakeFiles/Cpufit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Cpufit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Cpufit"
 .PHONY : Cpufit/CMakeFiles/Cpufit.dir/all
 
 # Build rule for subdir invocation for target.
 Cpufit/CMakeFiles/Cpufit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/CMakeFiles/Cpufit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : Cpufit/CMakeFiles/Cpufit.dir/rule
 
 # Convenience name for target.
@@ -1105,14 +1105,14 @@ Cpufit/CMakeFiles/Cpufit.dir/clean:
 Cpufit/python/CMakeFiles/PYTHON_PACKAGE_CPUFIT.dir/all: Cpufit/CMakeFiles/Cpufit.dir/all
 	$(MAKE) $(MAKESILENT) -f Cpufit/python/CMakeFiles/PYTHON_PACKAGE_CPUFIT.dir/build.make Cpufit/python/CMakeFiles/PYTHON_PACKAGE_CPUFIT.dir/depend
 	$(MAKE) $(MAKESILENT) -f Cpufit/python/CMakeFiles/PYTHON_PACKAGE_CPUFIT.dir/build.make Cpufit/python/CMakeFiles/PYTHON_PACKAGE_CPUFIT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target PYTHON_PACKAGE_CPUFIT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target PYTHON_PACKAGE_CPUFIT"
 .PHONY : Cpufit/python/CMakeFiles/PYTHON_PACKAGE_CPUFIT.dir/all
 
 # Build rule for subdir invocation for target.
 Cpufit/python/CMakeFiles/PYTHON_PACKAGE_CPUFIT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/python/CMakeFiles/PYTHON_PACKAGE_CPUFIT.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : Cpufit/python/CMakeFiles/PYTHON_PACKAGE_CPUFIT.dir/rule
 
 # Convenience name for target.
@@ -1131,14 +1131,14 @@ Cpufit/python/CMakeFiles/PYTHON_PACKAGE_CPUFIT.dir/clean:
 Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/all: Cpufit/python/CMakeFiles/PYTHON_PACKAGE_CPUFIT.dir/all
 	$(MAKE) $(MAKESILENT) -f Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/build.make Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/depend
 	$(MAKE) $(MAKESILENT) -f Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/build.make Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=26 "Built target PYTHON_WHEEL_CPUFIT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=26 "Built target PYTHON_WHEEL_CPUFIT"
 .PHONY : Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/all
 
 # Build rule for subdir invocation for target.
 Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/rule
 
 # Convenience name for target.
@@ -1157,14 +1157,14 @@ Cpufit/python/CMakeFiles/PYTHON_WHEEL_CPUFIT.dir/clean:
 Gpufit/CMakeFiles/Gpufit.dir/all:
 	$(MAKE) $(MAKESILENT) -f Gpufit/CMakeFiles/Gpufit.dir/build.make Gpufit/CMakeFiles/Gpufit.dir/depend
 	$(MAKE) $(MAKESILENT) -f Gpufit/CMakeFiles/Gpufit.dir/build.make Gpufit/CMakeFiles/Gpufit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18 "Built target Gpufit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18 "Built target Gpufit"
 .PHONY : Gpufit/CMakeFiles/Gpufit.dir/all
 
 # Build rule for subdir invocation for target.
 Gpufit/CMakeFiles/Gpufit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/CMakeFiles/Gpufit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : Gpufit/CMakeFiles/Gpufit.dir/rule
 
 # Convenience name for target.
@@ -1177,30 +1177,30 @@ Gpufit/CMakeFiles/Gpufit.dir/clean:
 .PHONY : Gpufit/CMakeFiles/Gpufit.dir/clean
 
 #=============================================================================
-# Target rules for target Gpufit/examples/CMakeFiles/mp_solver.dir
+# Target rules for target Gpufit/examples/CMakeFiles/mp_solver_example.dir
 
 # All Build rule for target.
-Gpufit/examples/CMakeFiles/mp_solver.dir/all: Gpufit/CMakeFiles/Gpufit.dir/all
-	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver.dir/build.make Gpufit/examples/CMakeFiles/mp_solver.dir/depend
-	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver.dir/build.make Gpufit/examples/CMakeFiles/mp_solver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=27,28 "Built target mp_solver"
-.PHONY : Gpufit/examples/CMakeFiles/mp_solver.dir/all
+Gpufit/examples/CMakeFiles/mp_solver_example.dir/all: Gpufit/CMakeFiles/Gpufit.dir/all
+	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/depend
+	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=27,28 "Built target mp_solver_example"
+.PHONY : Gpufit/examples/CMakeFiles/mp_solver_example.dir/all
 
 # Build rule for subdir invocation for target.
-Gpufit/examples/CMakeFiles/mp_solver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 13
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/CMakeFiles/mp_solver.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
-.PHONY : Gpufit/examples/CMakeFiles/mp_solver.dir/rule
+Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 13
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/CMakeFiles/mp_solver_example.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
+.PHONY : Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule
 
 # Convenience name for target.
-mp_solver: Gpufit/examples/CMakeFiles/mp_solver.dir/rule
-.PHONY : mp_solver
+mp_solver_example: Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule
+.PHONY : mp_solver_example
 
 # clean rule for target.
-Gpufit/examples/CMakeFiles/mp_solver.dir/clean:
-	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver.dir/build.make Gpufit/examples/CMakeFiles/mp_solver.dir/clean
-.PHONY : Gpufit/examples/CMakeFiles/mp_solver.dir/clean
+Gpufit/examples/CMakeFiles/mp_solver_example.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/clean
+.PHONY : Gpufit/examples/CMakeFiles/mp_solver_example.dir/clean
 
 #=============================================================================
 # Target rules for target Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir
@@ -1209,14 +1209,14 @@ Gpufit/examples/CMakeFiles/mp_solver.dir/clean:
 Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/all: Gpufit/CMakeFiles/Gpufit.dir/all
 	$(MAKE) $(MAKESILENT) -f Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/build.make Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/depend
 	$(MAKE) $(MAKESILENT) -f Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/build.make Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num= "Built target PYTHON_PACKAGE"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num= "Built target PYTHON_PACKAGE"
 .PHONY : Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/all
 
 # Build rule for subdir invocation for target.
 Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/rule
 
 # Convenience name for target.
@@ -1235,14 +1235,14 @@ Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/clean:
 Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/all: Gpufit/python/CMakeFiles/PYTHON_PACKAGE.dir/all
 	$(MAKE) $(MAKESILENT) -f Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/build.make Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/depend
 	$(MAKE) $(MAKESILENT) -f Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/build.make Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=25 "Built target PYTHON_WHEEL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=25 "Built target PYTHON_WHEEL"
 .PHONY : Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/all
 
 # Build rule for subdir invocation for target.
 Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : Gpufit/python/CMakeFiles/PYTHON_WHEEL.dir/rule
 
 # Convenience name for target.
@@ -1262,14 +1262,14 @@ examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Compariso
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/all: Gpufit/CMakeFiles/Gpufit.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=22,23,24 "Built target Gpufit_Cpufit_Performance_Comparison"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=22,23,24 "Built target Gpufit_Cpufit_Performance_Comparison"
 .PHONY : examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/all
 
 # Build rule for subdir invocation for target.
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/rule
 
 # Convenience name for target.
@@ -1289,14 +1289,14 @@ examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/all: Gpufit/CMakeFiles/Gpufit.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/sarahTang/Gpufit-build/CMakeFiles --progress-num=19,20,21 "Built target Gpufit_Cpufit_Nvidia_Profiler_Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles --progress-num=19,20,21 "Built target Gpufit_Cpufit_Nvidia_Profiler_Test"
 .PHONY : examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/all
 
 # Build rule for subdir invocation for target.
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/rule
 
 # Convenience name for target.

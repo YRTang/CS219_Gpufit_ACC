@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test/sarahTang/Gpufit
+CMAKE_SOURCE_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test/sarahTang/Gpufit-build
+CMAKE_BINARY_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles /home/test/sarahTang/Gpufit-build/Gpufit/examples//CMakeFiles/progress.marks
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/Gpufit/examples//CMakeFiles/progress.marks
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/clean
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,56 +113,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/preinstall
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/preinstall
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-Gpufit/examples/CMakeFiles/mp_solver.dir/rule:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/CMakeFiles/mp_solver.dir/rule
-.PHONY : Gpufit/examples/CMakeFiles/mp_solver.dir/rule
+Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule:
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule
+.PHONY : Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule
 
 # Convenience name for target.
-mp_solver: Gpufit/examples/CMakeFiles/mp_solver.dir/rule
-.PHONY : mp_solver
+mp_solver_example: Gpufit/examples/CMakeFiles/mp_solver_example.dir/rule
+.PHONY : mp_solver_example
 
 # fast build rule for target.
-mp_solver/fast:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver.dir/build.make Gpufit/examples/CMakeFiles/mp_solver.dir/build
-.PHONY : mp_solver/fast
+mp_solver_example/fast:
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/build
+.PHONY : mp_solver_example/fast
 
-mp_solver.o: mp_solver.cpp.o
-.PHONY : mp_solver.o
+mp_solver_example.o: mp_solver_example.cpp.o
+.PHONY : mp_solver_example.o
 
 # target to build an object file
-mp_solver.cpp.o:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver.dir/build.make Gpufit/examples/CMakeFiles/mp_solver.dir/mp_solver.cpp.o
-.PHONY : mp_solver.cpp.o
+mp_solver_example.cpp.o:
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/mp_solver_example.cpp.o
+.PHONY : mp_solver_example.cpp.o
 
-mp_solver.i: mp_solver.cpp.i
-.PHONY : mp_solver.i
+mp_solver_example.i: mp_solver_example.cpp.i
+.PHONY : mp_solver_example.i
 
 # target to preprocess a source file
-mp_solver.cpp.i:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver.dir/build.make Gpufit/examples/CMakeFiles/mp_solver.dir/mp_solver.cpp.i
-.PHONY : mp_solver.cpp.i
+mp_solver_example.cpp.i:
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/mp_solver_example.cpp.i
+.PHONY : mp_solver_example.cpp.i
 
-mp_solver.s: mp_solver.cpp.s
-.PHONY : mp_solver.s
+mp_solver_example.s: mp_solver_example.cpp.s
+.PHONY : mp_solver_example.s
 
 # target to generate assembly for a file
-mp_solver.cpp.s:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver.dir/build.make Gpufit/examples/CMakeFiles/mp_solver.dir/mp_solver.cpp.s
-.PHONY : mp_solver.cpp.s
+mp_solver_example.cpp.s:
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f Gpufit/examples/CMakeFiles/mp_solver_example.dir/build.make Gpufit/examples/CMakeFiles/mp_solver_example.dir/mp_solver_example.cpp.s
+.PHONY : mp_solver_example.cpp.s
 
 # Help Target
 help:
@@ -173,10 +173,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... mp_solver"
-	@echo "... mp_solver.o"
-	@echo "... mp_solver.i"
-	@echo "... mp_solver.s"
+	@echo "... mp_solver_example"
+	@echo "... mp_solver_example.o"
+	@echo "... mp_solver_example.i"
+	@echo "... mp_solver_example.s"
 .PHONY : help
 
 
@@ -188,6 +188,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/test/sarahTang/Gpufit
+CXX_INCLUDES = -I/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++14
 

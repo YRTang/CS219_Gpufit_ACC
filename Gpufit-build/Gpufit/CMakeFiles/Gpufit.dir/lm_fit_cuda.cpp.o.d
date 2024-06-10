@@ -1,8 +1,10 @@
 Gpufit/CMakeFiles/Gpufit.dir/lm_fit_cuda.cpp.o: \
- /home/test/sarahTang/Gpufit/Gpufit/lm_fit_cuda.cpp \
- /usr/include/stdc-predef.h /home/test/sarahTang/Gpufit/Gpufit/lm_fit.h \
- /home/test/sarahTang/Gpufit/Gpufit/info.h \
- /home/test/sarahTang/Gpufit/Gpufit/gpufit.h /usr/include/c++/13/cstddef \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/lm_fit_cuda.cpp \
+ /usr/include/stdc-predef.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/lm_fit.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/info.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/gpufit.h \
+ /usr/include/c++/13/cstddef \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -125,13 +127,13 @@ Gpufit/CMakeFiles/Gpufit.dir/lm_fit_cuda.cpp.o: \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/functional_hash.h \
  /usr/include/c++/13/bits/basic_string.tcc \
- /home/test/sarahTang/Gpufit/Gpufit/constants.h \
- /home/test/sarahTang/Gpufit/Gpufit/definitions.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/constants.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/definitions.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/test/sarahTang/Gpufit/Gpufit/gpu_data.cuh \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/gpu_data.cuh \
  /usr/include/cuda_runtime.h /usr/include/crt/host_config.h \
  /usr/include/builtin_types.h /usr/include/device_types.h \
  /usr/include/crt/host_defines.h /usr/include/driver_types.h \
@@ -151,5 +153,5 @@ Gpufit/CMakeFiles/Gpufit.dir/lm_fit_cuda.cpp.o: \
  /usr/include/driver_functions.h /usr/include/vector_functions.h \
  /usr/include/vector_functions.hpp /usr/include/c++/13/utility \
  /usr/include/c++/13/bits/stl_relops.h /usr/include/c++/13/limits \
- /home/test/sarahTang/Gpufit/Gpufit/cuda_gaussjordan.cuh \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Gpufit/cuda_gaussjordan.cuh \
  /usr/include/device_launch_parameters.h

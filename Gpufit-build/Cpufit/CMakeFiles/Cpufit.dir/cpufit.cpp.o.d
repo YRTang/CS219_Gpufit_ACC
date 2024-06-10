@@ -1,6 +1,8 @@
 Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.o: \
- /home/test/sarahTang/Gpufit/Cpufit/cpufit.cpp /usr/include/stdc-predef.h \
- /home/test/sarahTang/Gpufit/Cpufit/cpufit.h /usr/include/c++/13/cstddef \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/cpufit.cpp \
+ /usr/include/stdc-predef.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/cpufit.h \
+ /usr/include/c++/13/cstddef \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -12,8 +14,8 @@ Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
- /home/test/sarahTang/Gpufit/Cpufit/../Gpufit/constants.h \
- /home/test/sarahTang/Gpufit/Cpufit/../Gpufit/definitions.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/../Gpufit/constants.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/../Gpufit/definitions.h \
  /usr/include/c++/13/stdexcept /usr/include/c++/13/exception \
  /usr/include/c++/13/bits/exception.h \
  /usr/include/c++/13/bits/exception_ptr.h \
@@ -125,10 +127,10 @@ Cpufit/CMakeFiles/Cpufit.dir/cpufit.cpp.o: \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/functional_hash.h \
  /usr/include/c++/13/bits/basic_string.tcc \
- /home/test/sarahTang/Gpufit/Cpufit/interface.h \
- /home/test/sarahTang/Gpufit/Cpufit/lm_fit.h \
- /home/test/sarahTang/Gpufit/Cpufit/info.h /usr/include/c++/13/vector \
- /usr/include/c++/13/bits/stl_uninitialized.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/interface.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/lm_fit.h \
+ /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit/Cpufit/info.h \
+ /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc

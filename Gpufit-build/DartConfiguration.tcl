@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/test/sarahTang/Gpufit
-BuildDirectory: /home/test/sarahTang/Gpufit-build
+SourceDirectory: /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
+BuildDirectory: /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -27,7 +27,7 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/test/sarahTang/Gpufit"
+ConfigureCommand: "/usr/bin/cmake" "/home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 

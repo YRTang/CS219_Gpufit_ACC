@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test/sarahTang/Gpufit
+CMAKE_SOURCE_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test/sarahTang/Gpufit-build
+CMAKE_BINARY_DIR = /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles /home/test/sarahTang/Gpufit-build/examples/c++/gpu_vs_cpu_profiling//CMakeFiles/progress.marks
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/sarahTang/Gpufit-build/CMakeFiles 0
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/examples/c++/gpu_vs_cpu_profiling//CMakeFiles/progress.marks
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/clean
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,22 +113,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/preinstall
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/preinstall
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/rule:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/rule
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/rule
 .PHONY : examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/rule
 
 # Convenience name for target.
@@ -137,12 +137,12 @@ Gpufit_Cpufit_Performance_Comparison: examples/c++/gpu_vs_cpu_profiling/CMakeFil
 
 # fast build rule for target.
 Gpufit_Cpufit_Performance_Comparison/fast:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build
 .PHONY : Gpufit_Cpufit_Performance_Comparison/fast
 
 # Convenience name for target.
 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/rule:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/rule
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/rule
 .PHONY : examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/rule
 
 # Convenience name for target.
@@ -151,7 +151,7 @@ Gpufit_Cpufit_Nvidia_Profiler_Test: examples/c++/gpu_vs_cpu_profiling/CMakeFiles
 
 # fast build rule for target.
 Gpufit_Cpufit_Nvidia_Profiler_Test/fast:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build
 .PHONY : Gpufit_Cpufit_Nvidia_Profiler_Test/fast
 
 Gpufit_Cpufit_Nvidia_Profiler_Test.o: Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.o
@@ -159,7 +159,7 @@ Gpufit_Cpufit_Nvidia_Profiler_Test.o: Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.o
 
 # target to build an object file
 Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.o:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.o
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.o
 .PHONY : Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.o
 
 Gpufit_Cpufit_Nvidia_Profiler_Test.i: Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.i
@@ -167,7 +167,7 @@ Gpufit_Cpufit_Nvidia_Profiler_Test.i: Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.i
 
 # target to preprocess a source file
 Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.i:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.i
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.i
 .PHONY : Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.i
 
 Gpufit_Cpufit_Nvidia_Profiler_Test.s: Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.s
@@ -175,7 +175,7 @@ Gpufit_Cpufit_Nvidia_Profiler_Test.s: Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.s
 
 # target to generate assembly for a file
 Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.s:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.s
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.s
 .PHONY : Gpufit_Cpufit_Nvidia_Profiler_Test.cpp.s
 
 Gpufit_Cpufit_Performance_Comparison.o: Gpufit_Cpufit_Performance_Comparison.cpp.o
@@ -183,7 +183,7 @@ Gpufit_Cpufit_Performance_Comparison.o: Gpufit_Cpufit_Performance_Comparison.cpp
 
 # target to build an object file
 Gpufit_Cpufit_Performance_Comparison.cpp.o:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.o
 .PHONY : Gpufit_Cpufit_Performance_Comparison.cpp.o
 
 Gpufit_Cpufit_Performance_Comparison.i: Gpufit_Cpufit_Performance_Comparison.cpp.i
@@ -191,7 +191,7 @@ Gpufit_Cpufit_Performance_Comparison.i: Gpufit_Cpufit_Performance_Comparison.cpp
 
 # target to preprocess a source file
 Gpufit_Cpufit_Performance_Comparison.cpp.i:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.i
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.i
 .PHONY : Gpufit_Cpufit_Performance_Comparison.cpp.i
 
 Gpufit_Cpufit_Performance_Comparison.s: Gpufit_Cpufit_Performance_Comparison.cpp.s
@@ -199,7 +199,7 @@ Gpufit_Cpufit_Performance_Comparison.s: Gpufit_Cpufit_Performance_Comparison.cpp
 
 # target to generate assembly for a file
 Gpufit_Cpufit_Performance_Comparison.cpp.s:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.s
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/Gpufit_Cpufit_Performance_Comparison.cpp.s
 .PHONY : Gpufit_Cpufit_Performance_Comparison.cpp.s
 
 __/__/__/tests/utils.o: __/__/__/tests/utils.cpp.o
@@ -207,8 +207,8 @@ __/__/__/tests/utils.o: __/__/__/tests/utils.cpp.o
 
 # target to build an object file
 __/__/__/tests/utils.cpp.o:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/__/__/__/tests/utils.cpp.o
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.o
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/__/__/__/tests/utils.cpp.o
 .PHONY : __/__/__/tests/utils.cpp.o
 
 __/__/__/tests/utils.i: __/__/__/tests/utils.cpp.i
@@ -216,8 +216,8 @@ __/__/__/tests/utils.i: __/__/__/tests/utils.cpp.i
 
 # target to preprocess a source file
 __/__/__/tests/utils.cpp.i:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.i
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/__/__/__/tests/utils.cpp.i
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.i
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/__/__/__/tests/utils.cpp.i
 .PHONY : __/__/__/tests/utils.cpp.i
 
 __/__/__/tests/utils.s: __/__/__/tests/utils.cpp.s
@@ -225,8 +225,8 @@ __/__/__/tests/utils.s: __/__/__/tests/utils.cpp.s
 
 # target to generate assembly for a file
 __/__/__/tests/utils.cpp.s:
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.s
-	cd /home/test/sarahTang/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/__/__/__/tests/utils.cpp.s
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Performance_Comparison.dir/__/__/__/tests/utils.cpp.s
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(MAKE) $(MAKESILENT) -f examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/build.make examples/c++/gpu_vs_cpu_profiling/CMakeFiles/Gpufit_Cpufit_Nvidia_Profiler_Test.dir/__/__/__/tests/utils.cpp.s
 .PHONY : __/__/__/tests/utils.cpp.s
 
 # Help Target
@@ -260,6 +260,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/test/sarahTang/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/test/kexinZheng/CS219_Gpufit_ACC/Gpufit-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

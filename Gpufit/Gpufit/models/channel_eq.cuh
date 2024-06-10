@@ -47,13 +47,13 @@ __device__ void calculate_channel_eq(
     int size = 3; 
 
     int const chunk_begin = chunk_index * n_fits * n_points * 2;
-    int const fit_begin = fit_index * n_points;
+    int const fit_begin = fit_index * n_points * 2;
     m = user_info_float[chunk_begin + fit_begin + point_index * 2];
     n = user_info_float[chunk_begin + fit_begin + point_index * 2 + 1];
 
     ///////////////////////////// value //////////////////////////////
     // for storing the intermediate periodic function calculations
-    REAL * periodic = new REAL[size];
+    REAL* periodic = new REAL[size];
     // initialize real and imaginary part of estimated y to 0
     value[point_index * 2] = 0;
     value[point_index * 2 + 1] = 0;
@@ -61,8 +61,8 @@ __device__ void calculate_channel_eq(
     for(int i = 0; i < size; i++)
     {
         // cos and sin using tau_i+1, mu_i+1, and h_i+1
-        periodic[2 * i] = cos(2 * M_PI * (m * p[4 * i] - n * p[4 * i + 1]));
-        periodic[2 * i + 1] = sin(2 * M_PI * (m * p[4 * i] - n * p[4 * i + 1]));
+        periodic[2 * i] = cos(-2 * M_PI * (m * p[4 * i] - n * p[4 * i + 1]));
+        periodic[2 * i + 1] = sin(-2 * M_PI * (m * p[4 * i] - n * p[4 * i + 1]));
         // real part of estimated y
         value[point_index * 2] +=  periodic[2 * i] * p[4 * i + 2] - periodic[2 * i + 1] * p[4* i + 3];     
         // imaginary part of estimated y
@@ -83,13 +83,13 @@ __device__ void calculate_channel_eq(
     // derivative wrt tau
     // derivative targeted index: 0, 
     for(int i = 0; i < size; i++)
-        current_derivative[i * 2 * n_points] = -2 * M_PI * m * periodic[2 * i + 1] * p[4 * i + 2] 
-                                                - 2 * M_PI * m * periodic[2 * i] * p[4 * i + 3];
+        current_derivative[i * 2 * n_points] = 2 * M_PI * m * (periodic[2 * i + 1] * p[4 * i + 2] 
+                                                + periodic[2 * i] * p[4 * i + 3]);
 
     // derivative wrt nu
     for(int i = 0; i < size; i++)
-        current_derivative[(i + 3) * 2 * n_points] = 2 * M_PI * n * periodic[2 * i + 1] * p[4 * i + 2] 
-                                                    + 2 * M_PI * n * periodic[2 * i] * p[4 * i + 3];
+        current_derivative[(i + 3) * 2 * n_points] = 2 * M_PI * n * (periodic[2 * i + 1] * p[4 * i + 2] 
+                                                    + periodic[2 * i] * p[4 * i + 3]);
 
     // derivative wrt h_real
     for(int i = 0; i < size; i++)
@@ -103,21 +103,24 @@ __device__ void calculate_channel_eq(
 
     // derivative wrt tau
     for(int i = 0; i < size; i++)
-        current_derivative[(2 * i + 1) * n_points] = -2 * M_PI * m * periodic[2 * i + 1] * p[4 * i + 3] 
-                                                    + 2 * M_PI * m * periodic[2 * i] * p[4 * i + 2];
+        current_derivative[(2 * i + 1) * n_points] = 2 * M_PI * m * (periodic[2 * i + 1] * p[4 * i + 3] 
+                                                    - periodic[2 * i] * p[4 * i + 2]);
 
     // derivative wrt nu
     for(int i = 0; i < size; i++)
-        current_derivative[(2 * i + 7) * n_points] = 2 * M_PI * n * periodic[2 * i + 1] * p[4 * i + 3] 
-                                                    - 2 * M_PI * n * periodic[2 * i] * p[4 * i + 2];
+        current_derivative[(2 * i + 7) * n_points] = 2 * M_PI * n * (periodic[2 * i + 1] * p[4 * i + 3] 
+                                                    - periodic[2 * i] * p[4 * i + 2]);
 
     // derivative wrt h_real
     for(int i = 0; i < size; i++)
-        current_derivative[(2 * i + 13) * n_points] = periodic[2 * i];
+        current_derivative[(2 * i + 13) * n_points] = periodic[2 * i + 1];
 
     // derivative wrt h_img
     for(int i = 0; i < size; i++)
-        current_derivative[(2 * i + 19) * n_points] = periodic[2 * i + 1];
+        current_derivative[(2 * i + 19) * n_points] = periodic[2 * i];
+
+    // free allocated memory
+    delete[] periodic;
 }
 
 #endif
