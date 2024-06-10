@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/mp_solver_example.dir/mp_solver_example.cpp.o -o ../../mp_solver_example  -Wl,-rpath,/home/test/sarahTang/Gpufit-build/Gpufit ../libGpufit.so /usr/lib/x86_64-linux-gnu/libcudart_static.a -ldl /usr/lib/x86_64-linux-gnu/librt.a 
