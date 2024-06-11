@@ -5,16 +5,39 @@
 #include <iostream>
 #include <math.h>
 
+#include <gsl/gsl_rng.h>
+#include <gsl/gsl_randist.h>
+#include <gsl/gsl_matrix.h>
+#include <gsl/gsl_vector.h>
+#include <gsl/gsl_blas.h>
+#include <gsl/gsl_multifit_nlinear.h>
+
 #include <immintrin.h>
 #include <chrono>
 #include <complex.h>
 
-#define CSV_PATH "../Gpufit/examples/c++/myProject/sample_input_test.csv"
+#define CSV_PATH "../Gpufit/examples/c++/myProject/sample_input.csv"
+
+double LSE_compute(mp_config_t *mp_config, mp_profile_t *mp_profile)
+{
+	double lse = 0;
+	for (int k = 0; k < mp_config->nof_pilots; ++k)
+	{
+		_Complex double Yk = 0;
+		for (int p = 0; p < mp_config->nof_paths; ++p)
+		{
+			Yk += mp_profile->h[p] * cexp(-I * 2 * M_PI *
+										  (mp_profile->tau[p] * (mp_config->m[k] + 0.5) - mp_profile->nu[p] * (mp_config->n[k] + 0.5)));
+		}
+		lse += cabs(Yk - mp_config->y[k]);
+	}
+	return lse;
+}
 
 void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 {
 	// number of fits, fit points and parameters
-	std::size_t const n_fits = 100000;
+	std::size_t const n_fits = 1;
 	std::size_t const n_points_per_fit = mp_config->nof_pilots * 2; //=32
 	std::size_t const n_model_parameters = 12;
 
@@ -66,7 +89,7 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	REAL const tolerance = 0.000000001f;
 
 	// maximum number of iterations
-	int const max_number_iterations = 40;
+	int const max_number_iterations = 100;
 
 	// estimator ID
 	int const estimator_id = LSE;
@@ -141,6 +164,14 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	{
 		cout << i << endl;
 	}
+
+	for (int i = 0; i < 3; i++) {
+		mp_profile->tau[i] = output_parameters[4 * i];
+		mp_profile->nu[i] = output_parameters[4 * i + 1];
+		mp_profile->h[i] = output_parameters[4 * i  + 2] + I * output_parameters[4 * i + 3];
+	}
+
+	cout << "the LSE value: " << LSE_compute(mp_config, mp_profile) << endl;
 }
 
 int main(int argc, char *argv[])
