@@ -9,25 +9,25 @@
 #include <chrono>
 #include <complex.h>
 
-#define CSV_PATH "/home/alex/sp24/cs219/Gpufit/examples/c++/myProject/sample_input.csv"
+#define CSV_PATH "../Gpufit/examples/c++/myProject/sample_input_test.csv"
 
 void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 {
 	// number of fits, fit points and parameters
-	std::size_t const n_fits = 10000;
-	std::size_t const n_points_per_fit = mp_config->nof_pilots; //=32
+	std::size_t const n_fits = 100000;
+	std::size_t const n_points_per_fit = mp_config->nof_pilots * 2; //=32
 	std::size_t const n_model_parameters = 12;
 
 	// custom x positions for the data points of every fit, stored in user info
-	std::vector<REAL> user_info(n_points_per_fit * 2);
+	std::vector<REAL> user_info(n_points_per_fit);
 
-	for (std::size_t i = 0; i < n_points_per_fit; i++)
+	for (std::size_t i = 0; i < n_points_per_fit / 2; i++)
 	{
 		user_info[i * 2] = mp_config->m[i];
 		user_info[i * 2 + 1] = mp_config->n[i];
 	}
 	// size of user info in bytes
-	std::size_t const user_info_size = 2 * n_points_per_fit * sizeof(REAL);
+	std::size_t const user_info_size = n_points_per_fit * sizeof(REAL);
 
 	// initial parameters (randomized)
 	std::vector<REAL> initial_parameters(n_fits * n_model_parameters);
@@ -52,17 +52,18 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	std::vector<REAL> data(n_points_per_fit * n_fits);
 	for (std::size_t j = 0; j < n_fits; j++)
 	{
-		for (std::size_t i = 0; i < n_points_per_fit; i++)
+		for (std::size_t i = 0; i < n_points_per_fit; i += 2)
 		{
 			/* data[j * n_fits + 2 * i] = creal(mp_config->y[i]);
 			data[j * n_fits + 2 * i + 1] = cimag(mp_config->y[i]); */
 
-			data[j * n_points_per_fit + i] = creal(mp_config->y[i]) + cimag(mp_config->y[i]);
+			data[j * n_points_per_fit + i] = creal(mp_config->y[i]);
+			data[j * n_points_per_fit + i + 1] = cimag(mp_config->y[i]);
 		}
 	}
 
 	// tolerance
-	REAL const tolerance = 0.001f;
+	REAL const tolerance = 0.000000001f;
 
 	// maximum number of iterations
 	int const max_number_iterations = 40;

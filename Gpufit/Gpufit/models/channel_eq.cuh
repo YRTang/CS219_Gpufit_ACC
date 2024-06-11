@@ -39,23 +39,40 @@ __device__ void calculate_channel_eq(
     ///////////////////////////// modify user_info //////////////////////////////
     REAL *user_info_float = (REAL *)user_info;
     REAL m, n = 0;
-    REAL const *p = parameters;
 #define TAU(x) parameters[x * 4]
 #define NU(x) parameters[x * 4 + 1]
 #define H_REAL(x) parameters[x * 4 + 2]
 #define H_IMAG(x) parameters[x * 4 + 3]
 
-    if (user_info_size / sizeof(REAL) == 2 * n_points)
+    bool real_part = point_index % 2 == 0;
+
+    if (user_info_size / sizeof(REAL) == n_points)
     {
-        m = user_info_float[point_index * 2];
-        n = user_info_float[point_index * 2 + 1];
+        if (real_part)
+        {
+            m = user_info_float[point_index];
+            n = user_info_float[point_index + 1];
+        }
+        else
+        {
+            m = user_info_float[point_index - 1];
+            n = user_info_float[point_index];
+        }
     }
-    else if (user_info_size / sizeof(REAL) > 2 * n_points)
+    else if (user_info_size / sizeof(REAL) > n_points)
     {
-        int const chunk_begin = chunk_index * n_fits * n_points * 2;
-        int const fit_begin = fit_index * n_points * 2;
-        m = user_info_float[chunk_begin + fit_begin + point_index * 2];
-        n = user_info_float[chunk_begin + fit_begin + point_index * 2 + 1];
+        int const chunk_begin = chunk_index * n_fits * n_points;
+        int const fit_begin = fit_index * n_points;
+        if (real_part)
+        {
+            m = user_info_float[chunk_begin + fit_begin + point_index];
+            n = user_info_float[chunk_begin + fit_begin + point_index + 1];
+        }
+        else
+        {
+            m = user_info_float[chunk_begin + fit_begin + point_index - 1];
+            n = user_info_float[chunk_begin + fit_begin + point_index];
+        }
     }
 
     ///////////////////////////// value //////////////////////////////
@@ -63,12 +80,12 @@ __device__ void calculate_channel_eq(
     /* REAL const A = cos(-2 * M_PI * (m * p[0] - n * p[1]));
     REAL const B = sin(-2 * M_PI * (m * p[0] - n * p[1])); */
 
-    REAL A[3] = {
+    REAL cos_alpha[3] = {
         cos(-2 * M_PI * (m * TAU(0) - n * NU(0))),
         cos(-2 * M_PI * (m * TAU(1) - n * NU(1))),
         cos(-2 * M_PI * (m * TAU(2) - n * NU(2)))};
 
-    REAL B[3] = {
+    REAL sin_alpha[3] = {
         sin(-2 * M_PI * (m * TAU(0) - n * NU(0))),
         sin(-2 * M_PI * (m * TAU(1) - n * NU(1))),
         sin(-2 * M_PI * (m * TAU(2) - n * NU(2)))};
@@ -78,10 +95,19 @@ __device__ void calculate_channel_eq(
     value[point_index * 2 + 1] = A * p[3] + B * p[2]; // imaginary part of estimated y */
 
     REAL tmp = 0;
-    for (int i = 0; i < 3; i++)
+    if (real_part)
     {
-        tmp += H_REAL(i) * A[i] - H_IMAG(i) * B[i];
-        tmp += H_REAL(i) * B[i] + H_IMAG(i) * A[i];
+        for (int i = 0; i < 3; i++)
+        {
+            tmp += H_REAL(i) * cos_alpha[i] - H_IMAG(i) * sin_alpha[i];
+        }
+    }
+    else
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            tmp += H_REAL(i) * sin_alpha[i] + H_IMAG(i) + cos_alpha[i];
+        }
     }
 
     value[point_index] = tmp;
@@ -95,17 +121,35 @@ __device__ void calculate_channel_eq(
 #define D_H_REAL_OFF(x) (4 * x + 2) * n_points
 #define D_H_IMAG_OFF(x) (4 * x + 3) * n_points
 
-    for (int i = 0; i < 3; i++)
+    if (real_part)
     {
-        current_derivative[D_TAU_OFF(i)] = 2 * M_PI * m *
-                                           ((H_REAL(i) + H_IMAG(i)) * B[i] + (H_IMAG(i) - H_REAL(i)) * A[i]);
+        for (int i = 0; i < 3; i++)
+        {
+            current_derivative[D_TAU_OFF(i)] = 2 * M_PI *
+                                               (H_REAL(i) * sin_alpha[i] + H_IMAG(i) * cos_alpha[i]) * m;
 
-        current_derivative[D_NU_OFF(i)] = 2 * M_PI * n *
-                                          ((H_REAL(i) + H_IMAG(i)) * B[i] + (H_IMAG(i) - H_REAL(i)) * A[i]);
+            current_derivative[D_NU_OFF(i)] = -2 * M_PI *
+                                              (H_REAL(i) * sin_alpha[i] + H_IMAG(i) * cos_alpha[i]) * n;
 
-        current_derivative[D_H_REAL_OFF(i)] = A[i] + B[i];
+            current_derivative[D_H_REAL_OFF(i)] = cos_alpha[i];
 
-        current_derivative[D_H_IMAG_OFF(i)] = A[i] - B[i];
+            current_derivative[D_H_IMAG_OFF(i)] = -sin_alpha[i];
+        }
+    }
+    else
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            current_derivative[D_TAU_OFF(i)] = -2 * M_PI *
+                                               (H_REAL(i) * cos_alpha[i] - H_IMAG(i) * sin_alpha[i]) * m;
+
+            current_derivative[D_NU_OFF(i)] = 2 * M_PI *
+                                              (H_REAL(i) * cos_alpha[i] - H_IMAG(i) * sin_alpha[i]) * n;
+
+            current_derivative[D_H_REAL_OFF(i)] = sin_alpha[i];
+
+            current_derivative[D_H_IMAG_OFF(i)] = cos_alpha[i];
+        }
     }
 }
 
