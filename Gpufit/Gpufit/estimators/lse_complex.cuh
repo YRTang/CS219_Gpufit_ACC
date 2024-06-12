@@ -170,9 +170,9 @@ __device__ void calculate_gradient_lse_complex(
     std::size_t const user_info_size)
 {
     // deviation of real number
-    REAL const real_d = data[2 * point_index] - value[2 * point_index];
+    REAL const real_d = value[2 * point_index] - data[2 * point_index];
     // deviation of imaginary number
-    REAL const image_n_d = data[2 * point_index + 1] - value[2 * point_index + 1];
+    REAL const image_n_d = value[2 * point_index + 1] - data[2 * point_index + 1];
 
     if (weight)
     {

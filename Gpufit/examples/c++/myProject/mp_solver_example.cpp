@@ -44,7 +44,7 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 
 			initial_parameters[i * n_model_parameters + p * 4 + 0] = 0.01; // 4: t, v, h_real, h_imag
 			initial_parameters[i * n_model_parameters + p * 4 + 1] = 0.01;
-			initial_parameters[i * n_model_parameters + p * 4 + 2] = 0.7;
+			initial_parameters[i * n_model_parameters + p * 4 + 2] = 0.5;
 			initial_parameters[i * n_model_parameters + p * 4 + 3] = 0.01;
 		}
 		initial_parameters[i * n_model_parameters + 2] = 1;
@@ -65,7 +65,7 @@ void mp_solver_example(mp_profile_t *mp_profile, mp_config_t *mp_config)
 	REAL const tolerance = 1.0E-9;
 
 	// maximum number of iterations
-	int const max_number_iterations = 200;
+	int const max_number_iterations = 1000;
 
 	// estimator ID
 	int const estimator_id = LSE_COMPLEX;
